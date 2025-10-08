@@ -3,10 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wellplus Medical Group – Family Practice & Walk-In Clinic</title>
-  <meta name="description" content="Primary care, same-day visits, Florida Medicare welcome. Board Certified Family Medicine physicians; Diplomates of the American Board of Obesity Medicine. CCM & RPM available.">
+  <title>Wellplus Medical Group – Family Practice & Walk-In Clinic in Zephyrhills & Lakeland, FL</title>
+  <meta name="description" content="Wellplus Medical Group offers comprehensive primary care, same-day visits, walk-in clinic services in Zephyrhills and Lakeland, FL. Board Certified Family Medicine physicians. Medicare accepted. CCM & RPM programs available.">
+  <meta name="keywords" content="family practice, walk-in clinic, primary care, Zephyrhills FL, Lakeland FL, Medicare, chronic care management, remote patient monitoring, same-day appointments">
   <meta name="theme-color" content="#0f3b66" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Wellplus Medical Group – Family Practice & Walk-In Clinic">
+  <meta property="og:description" content="Primary care, same-day visits, Florida Medicare welcome. Board Certified Family Medicine physicians in Zephyrhills & Lakeland, FL.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wellplusmedical.com">
+  <meta property="og:image" content="assets/wellplus-logo.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wellplus Medical Group – Family Practice & Walk-In Clinic">
+  <meta name="twitter:description" content="Primary care, same-day visits, Florida Medicare welcome. Board Certified Family Medicine physicians.">
+  <meta name="twitter:image" content="assets/wellplus-logo.png">
+  
   <link rel="icon" href="assets/wellplus-logo-icon.png">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Wellplus Medical Group",
+    "description": "Family practice and walk-in clinic providing comprehensive primary care services in Zephyrhills and Lakeland, Florida.",
+    "url": "https://wellplusmedical.com",
+    "logo": "https://wellplusmedical.com/assets/wellplus-logo.png",
+    "image": "https://wellplusmedical.com/assets/wellplus-logo.png",
+    "telephone": "+18137825518",
+    "email": "info@wellplusmedical.com",
+    "medicalSpecialty": "Family Practice",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Medical Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Primary Care Services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Chronic Care Management (CCM)"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Remote Patient Monitoring (RPM)"
+          }
+        }
+      ]
+    },
+    "location": [
+      {
+        "@type": "MedicalClinic",
+        "name": "Wellplus Medical Group - Zephyrhills Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6151 Fort King Rd",
+          "addressLocality": "Zephyrhills",
+          "addressRegion": "FL",
+          "postalCode": "33542",
+          "addressCountry": "US"
+        },
+        "telephone": "+18137825518",
+        "faxNumber": "+18137887306"
+      },
+      {
+        "@type": "MedicalClinic",
+        "name": "Wellplus Medical Group - Lakeland Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1230 W. Daughtery Rd",
+          "addressLocality": "Lakeland",
+          "addressRegion": "FL",
+          "postalCode": "33810",
+          "addressCountry": "US"
+        },
+        "telephone": "+18638583884",
+        "faxNumber": "+18638539506"
+      }
+    ],
+    "physician": [
+      {
+        "@type": "Physician",
+        "name": "Dr. Parth Patel",
+        "medicalSpecialty": "Family Medicine",
+        "memberOf": {
+          "@type": "MedicalOrganization",
+          "name": "American Board of Obesity Medicine"
+        }
+      }
+    ]
+  }
+  </script>
+  
   <style>
     :root{
       --bg:#ffffff; --text:#0f172a; --muted:#64748b;
@@ -20,13 +120,47 @@
     a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
     img{max-width:100%;height:auto;display:block}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+    
+    /* Header and Navigation */
     header{position:sticky;top:0;background:#ffffffd9;backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--line);z-index:10}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px;padding:8px 0}
     .brand{display:flex;align-items:center;gap:14px}
     .brand img{width:160px;height:auto}
-    nav a{font-weight:600;margin-left:12px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border:1px solid var(--brand);border-radius:999px;font-weight:700;background:#fff}
+    
+    /* Desktop Navigation */
+    .nav-menu{display:flex;align-items:center;gap:4px}
+    .nav-menu a{font-weight:600;padding:8px 12px;white-space:nowrap}
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;min-width:44px;min-height:44px}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--brand);margin:5px 0;transition:0.3s}
+    
+    /* Mobile Navigation */
+    @media(max-width:768px){
+      .brand img{width:140px}
+      .menu-toggle{display:flex;flex-direction:column;align-items:center;justify-content:center}
+      .nav-menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:#fff;
+        border-bottom:1px solid var(--line);
+        flex-direction:column;
+        padding:16px;
+        gap:8px;
+        display:none;
+        box-shadow:0 4px 6px rgba(0,0,0,0.1)
+      }
+      .nav-menu.active{display:flex}
+      .nav-menu a{width:100%;text-align:center;padding:12px;border-radius:8px}
+      .nav-menu a:hover{background:var(--card)}
+    }
+    
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border:1px solid var(--brand);border-radius:999px;font-weight:700;background:#fff;min-height:44px;text-align:center}
     .btn.primary{background:var(--brand);color:#fff}
+    .btn:hover{text-decoration:none;opacity:0.9}
+    
     section{padding:34px 0}
     .hero{padding:56px 0 28px;background:
       radial-gradient(900px 360px at 10% -20%, #e0f2fe 0%, transparent 60%),
@@ -34,15 +168,44 @@
     .title{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:.2em 0}
     .sub{color:var(--muted)}
     .grid{display:grid;gap:clamp(16px,2.2vw,24px)}
-    .two{grid-template-columns:1fr} @media(min-width:900px){.two{grid-template-columns:1.1fr .9fr}}
+    .two{grid-template-columns:1fr}
+    
+    @media(min-width:900px){
+      .two{grid-template-columns:1.1fr .9fr}
+    }
+    
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(16px,2.5vw,22px)}
-    h2{font-size:clamp(20px,3.2vw,28px);margin:.2em 0 .6em} h3{margin:.2em 0 .4em}
+    h2{font-size:clamp(20px,3.2vw,28px);margin:.2em 0 .6em} 
+    h3{margin:.2em 0 .4em}
     ul{margin:0;padding-left:20px}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecfeff;border:1px solid #cffafe;color:#0e7490;font-weight:600;margin:0 8px 8px 0}
     .clinic-grid{display:grid;grid-template-columns:1fr;gap:12px}
-    @media(min-width:720px){ .clinic-grid{grid-template-columns:1fr 1fr} }
-    .muted{color:var(--muted)} .small{font-size:13px}
+    
+    @media(min-width:720px){ 
+      .clinic-grid{grid-template-columns:1fr 1fr} 
+    }
+    
+    .muted{color:var(--muted)} 
+    .small{font-size:13px}
     .divider{height:1px;background:var(--line);margin:16px 0}
+    
+    /* Services Grid - Mobile Optimized */
+    .svc-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+    .svc{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px;border-radius:8px;transition:background 0.2s}
+    .svc:hover{background:rgba(15,59,102,0.03)}
+    .svc svg{width:20px;height:20px;stroke:#0f172a;flex-shrink:0}
+    .svc strong{display:block;font-size:15px;margin-bottom:4px}
+    .svc .muted{display:block;font-size:14px;line-height:1.4}
+    
+    @media(min-width:640px){
+      .svc-grid{grid-template-columns:1fr 1fr;gap:12px}
+    }
+    
+    @media(max-width:768px){
+      section{padding:24px 0}
+      .hero{padding:32px 0 20px}
+    }
+    
     footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
   </style>
 </head>
@@ -52,7 +215,12 @@
       <div class="brand">
         <img src="assets/wellplus-logo.png" alt="Wellplus Medical Group logo">
       </div>
-      <nav aria-label="Primary">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#programs">CCM & RPM</a>
         <a class="btn" href="tel:+18137825518">Call</a>
@@ -63,16 +231,27 @@
 
   <section class="hero" id="top">
     <div class="wrap grid two">
-      <!-- LEFT: Headline + Providers + Clinics -->
       <div class="card" style="background:#fff">
         <p class="pill">Family Practice • Walk-In Clinic</p>
-        <h1 class="title">Primary care that’s simple, same-day, and centered on you.</h1>
-          <div style="height:1px;background:var(--line);margin:.5rem 0 .7rem"></div>
+        <h1 class="title">Primary care that's simple, same-day, and centered on you.</h1>
+        <div style="height:1px;background:var(--line);margin:.5rem 0 .7rem"></div>
         <div style="margin:.5rem 0 0">
           <div style="font-weight:700;font-size:1.25em;color:#0f172a;line-height:1.35">Parth Patel, MD</div>
-          <div style="font-weight:700;font-size:1.25em;color:#0f172a;line-height:1.35">Omprakash Pansara, MD</div>
 
-          <div style="margin:.6rem 0 .75rem;color:#0f172a;font-size:1.02em"><div style="margin:.15rem 0"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px" fill="none" stroke="#0f172a" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg>Board Certified in Family Medicine</div><div style="margin:.15rem 0"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px" fill="none" stroke="#0f172a" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg>Diplomates, American Board of Obesity Medicine</div></div>
+          <div style="margin:.6rem 0 .75rem;color:#0f172a;font-size:1.02em">
+            <div style="margin:.15rem 0">
+              <svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px" fill="none" stroke="#0f172a" stroke-width="1.6">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M8 12l3 3 5-6"></path>
+              </svg>Board Certified in Family Medicine
+            </div>
+            <div style="margin:.15rem 0">
+              <svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px" fill="none" stroke="#0f172a" stroke-width="1.6">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M8 12l3 3 5-6"></path>
+              </svg>Diplomate, American Board of Obesity Medicine
+            </div>
+          </div>
 
           <p style="margin:.15rem 0 .85rem;color:#475569;font-size:.98em">Walk-ins welcome • Most major insurances accepted • Comprehensive primary care</p>
         </div>
@@ -87,7 +266,7 @@
               <a href="tel:+18137825518" style="display:block;font-weight:bold;font-size:1.05em;color:#0f172a;text-decoration:none">Phone: (813) 782-5518</a>
               <span class="small muted" style="display:block;margin-top:.2rem">Fax: (813) 788-7306</span>
             </p>
-            <div class="cta" style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <div class="cta" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
               <a class="btn" href="tel:+18137825518">Call Now</a>
               <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">Schedule</a>
               <a class="btn" href="https://maps.apple.com/?q=6151%20Fort%20King%20Rd%20Zephyrhills%20FL%2033542" target="_blank" rel="noopener">Directions</a>
@@ -101,7 +280,7 @@
               <a href="tel:+18638583884" style="display:block;font-weight:bold;font-size:1.05em;color:#0f172a;text-decoration:none">Phone: (863) 858-3884</a>
               <span class="small muted" style="display:block;margin-top:.2rem">Fax: (863) 853-9506</span>
             </p>
-            <div class="cta" style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <div class="cta" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
               <a class="btn" href="tel:+18638583884">Call Now</a>
               <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">Schedule</a>
               <a class="btn" href="https://maps.apple.com/?q=1230%20W.%20Daughtery%20Rd%20Lakeland%20FL%2033810" target="_blank" rel="noopener">Directions</a>
@@ -110,114 +289,100 @@
         </div>
       </div>
 
-      <!-- RIGHT: Schedule Card -->
       <div class="card" id="schedule" aria-labelledby="scheduleTitle">
-        <h2 id="scheduleTitle">Schedule</h2>
-        <p class="muted small">Book in seconds. Your appointment syncs directly with our EMR.</p>
+        <h2 id="scheduleTitle">Schedule Your Appointment</h2>
+        <p class="muted small">Book your appointment online in just a few clicks. Choose your preferred location, date, and time.</p>
 
-        <div id="scheduler-wrap" style="position:relative">
-          <iframe id="elationFrame" src="https://app.elationemr.com/book/1074004643938308" title="Schedule with Wellplus"
-                  style="width:100%;height:720px;border:1px solid var(--line);border-radius:12px;background:#fff"
-                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-          <div id="scheduler-fallback" style="display:none;margin-top:8px">
-            <div class="card" style="background:#fff;border:1px dashed var(--line)">
-              <p style="margin:0 0 8px;color:#475569">It looks like our embedded scheduler is blocked by the browser or provider settings.</p>
-              <div class="cta" style="display:flex;gap:10px;flex-wrap:wrap">
-                <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">Open Scheduler in a New Tab</a>
-                <a class="btn" href="tel:+18137825518">Call Zephyrhills</a>
-                <a class="btn" href="tel:+18638583884">Call Lakeland</a>
-              </div>
-              <p class="small muted" style="margin-top:8px">Tip: Hosting the site over HTTPS (not file://) improves compatibility for embedded scheduling.</p>
-            </div>
-          </div>
+        <div style="background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 100%);border-radius:12px;padding:32px 24px;text-align:center;margin:24px 0">
+          <svg viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;stroke:#0f3b66" fill="none" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <h3 style="margin:0 0 12px;color:#0f172a">Ready to Book?</h3>
+          <p style="color:#64748b;margin:0 0 24px;max-width:400px;margin-left:auto;margin-right:auto">Click below to access our secure online scheduling system</p>
+          <a href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener" class="btn primary" style="font-size:16px;padding:14px 28px;display:inline-flex">
+            Book Appointment Online
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:8px">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
         </div>
 
-        <script>
-          (function() {
-            const iframe = document.getElementById('elationFrame');
-            const fallback = document.getElementById('scheduler-fallback');
-            let loaded = false;
-            iframe.addEventListener('load', function() { loaded = true; });
-            // After 3.5s, if the frame didn't load, show fallback
-            setTimeout(function() {
-              try {
-                // Accessing contentWindow may throw when blocked; we use loaded flag too
-                if (!loaded) throw new Error('not loaded');
-              } catch (e) {
-                fallback.style.display = 'block';
-                iframe.style.display = 'none';
-              }
-            }, 3500);
-          })();
-        </script>
-        <p class="small muted" style="margin-top:8px">If you don't see the scheduler, <a href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+        <div class="divider"></div>
+        
+        <div style="text-align:center">
+          <p style="color:#64748b;margin:0 0 16px"><strong>Prefer to call?</strong></p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a href="tel:+18137825518" class="btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Zephyrhills: (813) 782-5518
+            </a>
+            <a href="tel:+18638583884" class="btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Lakeland: (863) 858-3884
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  
-<section id="services">
-  <div class="wrap">
-    <div class="card">
-      <h2 style="text-align:center">Comprehensive Primary Care Services</h2>
-      <style>
-        .svc-grid{display:grid;grid-template-columns:1fr;gap:18px}
-        @media(min-width:860px){.svc-grid{grid-template-columns:1fr 1fr}}
-        .svc{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
-        .svc svg{width:20px;height:20px;stroke:#0f172a}
-        .svc strong{display:block}
-        .svc .muted{display:block;margin-top:2px}
-      </style>
-      <div class="svc-grid">
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Same-day Visits & Walk-ins</strong><span class="muted">Quick access when you need care — no appointment required.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Annual Physicals & Wellness Exams</strong><span class="muted">Preventive checkups, including Medicare Annual Wellness Visits.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Chronic Disease Management</strong><span class="muted">Support for diabetes, hypertension, COPD, heart disease, and more.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Weight Management & Obesity Medicine</strong><span class="muted">Physician-guided weight loss treatment and lifestyle support.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Women’s Health</strong><span class="muted">Pap smears, well-woman exams, and preventive screenings.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Joint Injections</strong><span class="muted">Relief for arthritis, tendonitis, and joint pain.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Dermatologic Procedures</strong><span class="muted">Punch & excision biopsies for skin lesions and conditions.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Acute Care</strong><span class="muted">Treatment for infections, rashes, and minor injuries.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Telehealth & E‑visits</strong><span class="muted">Convenient care from the comfort of home.</span></div>
-        </div>
-        <div class="svc">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-          <div><strong>Care Coordination & Medications</strong><span class="muted">Streamlined follow‑up, prescriptions, and referrals.</span></div>
+  <section id="services">
+    <div class="wrap">
+      <div class="card">
+        <h2 style="text-align:center">Comprehensive Primary Care Services</h2>
+        <div class="svc-grid">
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Same-day Visits & Walk-ins</strong><span class="muted">Quick access when you need care — no appointment required.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Annual Physicals & Wellness Exams</strong><span class="muted">Preventive checkups, including Medicare Annual Wellness Visits.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Chronic Disease Management</strong><span class="muted">Support for diabetes, hypertension, COPD, heart disease, and more.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Weight Management & Obesity Medicine</strong><span class="muted">Physician-guided weight loss treatment and lifestyle support.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Women's Health</strong><span class="muted">Pap smears, well-woman exams, and preventive screenings.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Joint Injections</strong><span class="muted">Relief for arthritis, tendonitis, and joint pain.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Dermatologic Procedures</strong><span class="muted">Punch & excision biopsies for skin lesions and conditions.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Acute Care</strong><span class="muted">Treatment for infections, rashes, and minor injuries.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Telehealth & E‑visits</strong><span class="muted">Convenient care from the comfort of home.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Care Coordination & Medications</strong><span class="muted">Streamlined follow‑up, prescriptions, and referrals.</span></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- CCM & RPM -->
   <section id="programs">
     <div class="wrap grid two">
       <div class="card">
@@ -246,14 +411,30 @@
   </section>
 
   <footer>
-    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
       <div>© <span id="yr"></span> Wellplus Medical Group. All rights reserved.</div>
-      <div class="small">Email: <a href="mailto:contact@wellplusmedical.com">contact@wellplusmedical.com</a></div>
+      <div class="small">Email: <a href="mailto:info@wellplusmedical.com">info@wellplusmedical.com</a></div>
     </div>
   </footer>
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
+    
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', function() {
+      const isExpanded = navMenu.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isExpanded);
+    });
+    
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         const id=a.getAttribute('href').slice(1);
