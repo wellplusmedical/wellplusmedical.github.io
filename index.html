@@ -207,9 +207,57 @@
       .svc-grid{grid-template-columns:1fr 1fr;gap:12px}
     }
     
+    /* Reviews Slider */
+    .reviews-slider{
+      overflow:hidden;
+      position:relative;
+      padding:20px 0
+    }
+    .reviews-track{
+      display:flex;
+      gap:24px;
+      animation:scroll 60s linear infinite;
+      width:max-content
+    }
+    .reviews-track:hover{
+      animation-play-state:paused
+    }
+    .review-card{
+      background:#fff;
+      border-radius:12px;
+      padding:24px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      width:380px;
+      flex-shrink:0;
+      border:1px solid var(--line)
+    }
+    .review-card .stars{
+      font-size:18px;
+      margin-bottom:12px
+    }
+    .review-card p{
+      color:var(--text);
+      line-height:1.6;
+      margin:0 0 16px;
+      font-style:italic
+    }
+    .review-card strong{
+      color:var(--brand);
+      font-size:14px
+    }
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(calc(-380px * 7 - 24px * 7))}
+    }
+    
     @media(max-width:768px){
       section{padding:24px 0}
       .hero{padding:32px 0 20px}
+      .review-card{width:300px;padding:20px}
+      @keyframes scroll{
+        0%{transform:translateX(0)}
+        100%{transform:translateX(calc(-300px * 7 - 24px * 7))}
+      }
     }
     
     footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
@@ -341,6 +389,102 @@
               </svg>
               Lakeland: (863) 858-3884
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Reviews -->
+  <section id="reviews" style="background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 50%,#f8fafc 100%);padding:48px 0">
+    <div class="wrap">
+      <h2 style="text-align:center;margin-bottom:12px">What Our Patients Say</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px">Real experiences from our valued patients</p>
+      
+      <div class="reviews-slider">
+        <div class="reviews-track">
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Since moving from N.C. in October I been trying to find a family doctor who cared enough about me as a person & for my health. I got established & seen Dr. Patel. He was super friendly, kind, caring & concerned. Thank you for making it a wonderful experience. And I'm happy to say I found my new family practice!"</p>
+            <strong>- Olivia Small</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr. Patel makes me feel comfortable sharing my health issues with him. He seems to really care about my health and trying to find out what's going on. I'm very happy with him as my doctor. Also the staff there are very friendly and do a great job. I would recommend this doctor."</p>
+            <strong>- Misty Harrell</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr Patel showed concern and compassion with my pain issues. My A1C had increased a little and he was very patient in discussing it with me emphasizing a balanced diet and to curb carb intake. All in all my visit ended on a positive note. I like him very much and appreciate his time spent with me."</p>
+            <strong>- Dolores Callahan</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr. Patel is always friendly, never makes you feel like he's hurrying you to get to another patient. He takes time to explain what's going on and how he feels he'll take care of you."</p>
+            <strong>- Ike and Charlene Eigenhuis</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Great physician! Was able to get an appointment right away and he was able to take care of my issue without having to send me to a specialist. Very caring and compassionate. You don't see that very much these days. Highly recommend."</p>
+            <strong>- Terri</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr Patel is knowledgeable and takes the time to discuss all of your concerns. Answers all of your questions. He is very personable and easy to talk to, he seems concerned about your health. His office staff is terrific!"</p>
+            <strong>- Char Pencarinha</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr. Patel is the best PCP I have ever used. He and his staff are very professional, have addressed my issues, and are quick to respond to questions and requests for prescription refills."</p>
+            <strong>- Lynn Calkin</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr. Patel was very kind and caring. He got me in the same day I called because I was feeling poorly. He also called me back to report my X-ray findings and to give me additional instructions. What a gem we have in Winterhaven!"</p>
+            <strong>- Lori Clarke</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Awesome Doctor. Dr. Patel listens to his patients, provides educational information and explains test results and any thing you need to do to stay happy and healthy in a way you can understand."</p>
+            <strong>- U-Neek Hair Salon</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr. Patel takes care of my wife and I both. He has been such a breath of fresh air after dealing with the Dr.'s in S.C./ Ga. where we're from. I really can't say enough positive things about the man."</p>
+            <strong>- OU812</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"I love coming here. Great staff, very helpful with appointments and even getting you worked in if need be. Drs are compassionate. They don't rush through your visit. Very clean setting."</p>
+            <strong>- Teri Long</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Dr. Patel really care about his patients as exhibited in his care for me. He knows the medical history of his patients which is important when treating a patient. I vote him the physician of the year."</p>
+            <strong>- Jane Parker</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Always a great experience, starting with check in to checkout. Dr. Patel is efficient, attentive and obviously cares a great deal about his patients."</p>
+            <strong>- Lesco Rogers, M.D.</strong>
+          </div>
+          
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"I have recommended Dr. Patel to many of my friends. He is very good. He takes time with you. If you don't have a Dr in Winter Haven, I highly recommend him."</p>
+            <strong>- Randy McDaniel</strong>
           </div>
         </div>
       </div>
