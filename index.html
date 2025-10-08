@@ -1,388 +1,266 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <title> WellPlus Medical </title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>medical</title>
-    <link rel="icon" href="img/logo - Copy.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- themify CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="css/flaticon.css">
-    <!-- magnific popup CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- nice select CSS -->
-    <link rel="stylesheet" href="css/nice-select.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="css/slick.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wellplus Medical Group – Family Practice & Walk-In Clinic</title>
+  <meta name="description" content="Primary care, same-day visits, Florida Medicare welcome. Board Certified Family Medicine physicians; Diplomates of the American Board of Obesity Medicine. CCM & RPM available.">
+  <meta name="theme-color" content="#0f3b66" />
+  <link rel="icon" href="assets/wellplus-logo-icon.png">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0f172a; --muted:#64748b;
+      --brand:#0f3b66; --brand2:#2d7cc2; --line:#e2e8f0;
+      --card:#f8fafc; --shadow:0 8px 28px rgba(2,6,23,.08);
+      --radius:16px; --pad:clamp(14px,3vw,24px); --max:1100px;
+      --font:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Inter,Ubuntu,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:var(--font);color:var(--text);background:var(--bg)}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+    header{position:sticky;top:0;background:#ffffffd9;backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--line);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:160px;height:auto}
+    nav a{font-weight:600;margin-left:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border:1px solid var(--brand);border-radius:999px;font-weight:700;background:#fff}
+    .btn.primary{background:var(--brand);color:#fff}
+    section{padding:34px 0}
+    .hero{padding:56px 0 28px;background:
+      radial-gradient(900px 360px at 10% -20%, #e0f2fe 0%, transparent 60%),
+      radial-gradient(900px 360px at 100% -10%, #e6fffb 0%, transparent 60%)}
+    .title{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:.2em 0}
+    .sub{color:var(--muted)}
+    .grid{display:grid;gap:clamp(16px,2.2vw,24px)}
+    .two{grid-template-columns:1fr} @media(min-width:900px){.two{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(16px,2.5vw,22px)}
+    h2{font-size:clamp(20px,3.2vw,28px);margin:.2em 0 .6em} h3{margin:.2em 0 .4em}
+    ul{margin:0;padding-left:20px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecfeff;border:1px solid #cffafe;color:#0e7490;font-weight:600;margin:0 8px 8px 0}
+    .clinic-grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:720px){ .clinic-grid{grid-template-columns:1fr 1fr} }
+    .muted{color:var(--muted)} .small{font-size:13px}
+    .divider{height:1px;background:var(--line);margin:16px 0}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  </style>
 </head>
-
 <body>
-    <!--::header part start::-->
-    <header class="main_menu home_menu">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="assets/wellplus-logo.png" alt="Wellplus Medical Group logo">
+      </div>
+      <nav aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#programs">CCM & RPM</a>
+        <a class="btn" href="tel:+18137825518">Call</a>
+        <a class="btn primary" href="#schedule">Schedule</a>
+      </nav>
+    </div>
+  </header>
 
-                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
-                            id="navbarSupportedContent">
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                            <!--    <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
-                                </li>-->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="OurServices.html">Our Services</a>
-                                </li>
-                                
+  <section class="hero" id="top">
+    <div class="wrap grid two">
+      <!-- LEFT: Headline + Providers + Clinics -->
+      <div class="card" style="background:#fff">
+        <p class="pill">Family Practice • Walk-In Clinic</p>
+        <h1 class="title">Primary care that’s simple, same-day, and centered on you.</h1>
+          <div style="height:1px;background:var(--line);margin:.5rem 0 .7rem"></div>
+        <div style="margin:.5rem 0 0">
+          <div style="font-weight:700;font-size:1.25em;color:#0f172a;line-height:1.35">Parth Patel, MD</div>
+          <div style="font-weight:700;font-size:1.25em;color:#0f172a;line-height:1.35">Omprakash Pansara, MD</div>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                       
-                    </nav>
-                </div>
-            </div>
+          <div style="margin:.6rem 0 .75rem;color:#0f172a;font-size:1.02em"><div style="margin:.15rem 0"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px" fill="none" stroke="#0f172a" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg>Board Certified in Family Medicine</div><div style="margin:.15rem 0"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px" fill="none" stroke="#0f172a" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg>Diplomates, American Board of Obesity Medicine</div></div>
+
+          <p style="margin:.15rem 0 .85rem;color:#475569;font-size:.98em">Walk-ins welcome • Most major insurances accepted • Comprehensive primary care</p>
         </div>
-    </header>
-    <!-- Header part end-->
 
-    <!-- banner part start-->
-    <section class="banner_part">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-xl-5">
-                    <div class="banner_text">
-                        <div class="banner_text_iner">
-
-                            <h1>Your Care a
-                                call away</h1>
-                            <p>   </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="banner_img">
-                        <img src="img/dreamstime_l_180375924-removebg.png" alt="">
-                    </div>
-                </div>
+        <div class="divider"></div>
+        <h3>Our Clinics</h3>
+        <div class="clinic-grid">
+          <div class="card" style="background:#f8fafc;border:1px solid var(--line)">
+            <strong>Zephyrhills Clinic</strong><br>
+            <span class="muted">6151 Fort King Rd, Zephyrhills, FL 33542</span>
+            <p class="small" style="margin:.6rem 0 .3rem">
+              <a href="tel:+18137825518" style="display:block;font-weight:bold;font-size:1.05em;color:#0f172a;text-decoration:none">Phone: (813) 782-5518</a>
+              <span class="small muted" style="display:block;margin-top:.2rem">Fax: (813) 788-7306</span>
+            </p>
+            <div class="cta" style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn" href="tel:+18137825518">Call Now</a>
+              <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">Schedule</a>
+              <a class="btn" href="https://maps.apple.com/?q=6151%20Fort%20King%20Rd%20Zephyrhills%20FL%2033542" target="_blank" rel="noopener">Directions</a>
             </div>
-        </div>
-    </section>
-    <!-- banner part start-->
+          </div>
 
-    <!-- about us part start-->
-    <section class="about_us padding_top">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-md-6 col-lg-6">
-                    <div class="about_us_img">
-                        <img src="img/dreamstime_s_68613275-removebg.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="about_us_text">
-                        <h2>About us</h2>
-                        <p> We aim to provide high quality health care in simple and an affordable way.</p>
-                      <!--  <a class="btn_2 " href="about">learn more</a> 
-                        <div class="banner_item">
-                            <div class="single_item">
-                                <img src="img/icon/banner_1.svg" alt="">
-                                <h5>Emergency</h5>
-                            </div>
-                            <div class="single_item">
-                                <img src="img/icon/banner_2.svg" alt="">
-                                <h5>Appointment</h5>
-                            </div>
-                            <div class="single_item">
-                                <img src="img/icon/banner_3.svg" alt="">
-                                <h5>Qualfied</h5> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- about us part end-->
-
- 
-    
-     
-      <!-- feature_part start-->
-    <section class="feature_part">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <div class="section_tittle text-center">
-                        <h2> Our Services</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-3 col-sm-12">
-                    <div class="single_feature">
-                        <div class="single_feature_part">
-                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
-                            <h4>General Medical Visit</h4>
-                            <p> The service is primarily for treatment of established conditions rather than diagnosis, and relevant investigations such as blood tests, scans and procedures should have already been completed before referral.</p>
-                            
-                        </div>
-                    </div>
-                    <div class="single_feature">
-                        <div class="single_feature_part">
-                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
-                            <h4>COVID-19 Screening</h4>
-                            <p>We screen for COVID-19 symptoms and assess patients for potential exposure. We conduct a remote evaluation of the patient’s medical condition and determine if the patient needs to be in a regular hospital bed or in an intensive care unit. </p>
-                             
-                              
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                        <div class="single_feature_img">
-                            <img src="img/service.png" alt="">
-                        </div>
-                </div>
-                <div class="col-lg-3 col-sm-12">
-                    <div class="single_feature">
-                        <div class="single_feature_part">
-                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
-                           <h4>Short Term Medicine Refill </h4>
-                            <p>We make getting a medication easier than ever. You can book an appointment, speak with a physician online and pick up your prescription from any local pharmacy.</p>
-                        </div>
-                    </div>
-                    <div class="single_feature">
-                        <div class="single_feature_part">
-                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
-                            <h4>Wellness Labs</h4>
-                            <p>During your telemedicine conference, your physician can seamlessly order lab tests, which you can have collected at your nearest LabCorp patient service center.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- feature_part start-->
-
-    
-    
-    <!-- our depertment part start-->
-    <section class="our_depertment section_padding">
-        <div class="container">
-            <div class="row justify-content-center text-left">
-                <div class="col-xl-12">
-                    <div class="depertment_content">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-8">
-                                <h2> <center> What We Treat </center></h2>
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                         
-                                    <h4>Chronic medical problems</h4>
-                                    <li>Diabetes</li>
-                                    <li>Hypertension</li>
-                                    <li>High cholesterol </li>
-                                    <li>Thyroid disease </li>
-                                    <li>Benign Prostate Hyperplasia</li>
-                                    <li>Erectile dysfunction</li>
-                                    <li>Restless legs syndrome</li>
-                                    <li>High cholesterol </li>
-                                    <li>Fatigue </li>
-                                    <li>Metabolic syndrome  </li>
-                                    <li>IBS</li>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                            
-                                            <h4>Acute medical problems</h4>
-                                            <li>STIs</li>
-                                    <li>Cough</li>
-                                    <li>Asthma</li>
-                                    <li>Sinus infections </li>
-                                    <li>Skin Conditions</li>
-                                    <li>Acne </li>
-                                    <li>Rashes </li>
-                                    <li>Allergies  </li>
-                                    <li>Fatigue </li>
-                                    <li>Hives   </li>
-                                    <li>Sunburn</li>
-                            <li>UTIs </li>
-                                    <li>Yeast infections  </li>
-                                    <li>Joint pain </li>
-                                    <li>Prostatitis   </li>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                           
-                                             <h4>Mental health</h4>
-                            <li>Anxiety   </li>
-                         <li>Depression</li>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                            
-                                               <h4>Wellness check up</h4>
-                               <li>Men's Health   </li>
-                         <li>Women’s Health</li>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-14 col-sm-14">
-                                    <div class="single_our_depertment">
-                                <h4> What we do not treat:</h4>
-                                        
-                                        <p> Traumatic brain or spinal cord injury, Chest pain and/or numbness, Vomiting or coughing blood.
-Lacerations, Loss of consciousness, Broken bones, Severe burns, and Ear infections. </p>
-                                                                        </div>
-
-                            </div>
-                            
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- our depertment part end-->
-
-	<!-- Start Align Area -->
-	<div class="whole-wrap">
-		<div class="container box_1170">
-			<div class="section-top-border">
-				<h3 class="mb-30">Your satisfaction is guaranteed.</h3>
-				<div class="row">
-					<div class="col-md-9 mt-sm-20">
-						<p>We stand behind the medical care and advice we provide. If you have any questions
-you can message or call our medical team anytime. If you aren't happy our service, we
-offer a 100% satisfaction guarantee and refund policy. We can't refund medicines, lab
-tests, or supplies purchased from the pharmacy or other outside businesses.</p>
-					</div>
-                    <div class="col-md-3">
-						<img src="img/376-3764290_customer-satisfaction-png-clipart.png" alt="" class="img-fluid">
-					</div>
-				</div>
-			</div>
-			<div class="section-top-border text-left">
-				<h3 class="mb-30">You don't need insurance.</h3>
-				<div class="row">
-					<div class="col-md-9 mt-sm-20">
-						<p class="text-left">You don't need insurance to use our telemedicine services and the visit fee you see is
-the full price. There are no hidden fees. We will also work with you to help find
-medicines and pharmacies that offer the lowest price for any medicines or treatments
-we prescribe. If you have insurance, you can use it to pay for your medicine.</p>
-
-					</div>
-					<div class="col-md-3">
-						<img src="img/medium_No-Insurance-No-Problem.png" alt="" class="img-fluid">
-					</div>
-				</div>
-			</div>
-            
-			<div class="section-top-border">
-				<h3 class="mb-30">What about lab testing?</h3>
-				<div class="row">
-					
-					<div class="col-md-9 mt-sm-20">
-						<p>We can offer lab testing from leading labs and the lab cost is included in the visit fees you pay unless otherwise specified. </p>
-					</div>
-                    <div class="col-md-3">
-						<img src="img/clipart3342019.png" alt="" class="img-fluid">
-					</div>
-				</div>
-			</div>
-
-
-            
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTn77zM6kRiUkYrh8Q4Kwipu3DAQBRrH05ue4U4cHOLNSAyQ/viewform?embedded=true" width="640" height="705" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            
-
-     <!-- footer part start-->
-  <footer class="footer-area">
-    <div class="footer section_padding">
-      <div class="container">
-        <div class="row justify-content-between">
-            						
-  
-          <div class="col-xl-3 col-sm-4 col-md-6 single-footer-widget">
-        <h4>Contact Information</h4>
-							<ul class="fh5co-footer-links">
-								
-								<li><a href="tel://8134445916">+1 813 444 5916</a></li>
-								<li><a href="mailto:contact@wellplusmedical.com">contact@wellplusmedical.com</a>
-								</li>
-								<li><a href="https://wellplusmedical.com">wellplusmedical.com</a></li>
-							</ul>
-              	
-
-                <div class="info"></div>
+          <div class="card" style="background:#f8fafc;border:1px solid var(--line)">
+            <strong>Lakeland Clinic</strong><br>
+            <span class="muted">1230 W. Daughtery Rd, Lakeland, FL 33810</span>
+            <p class="small" style="margin:.6rem 0 .3rem">
+              <a href="tel:+18638583884" style="display:block;font-weight:bold;font-size:1.05em;color:#0f172a;text-decoration:none">Phone: (863) 858-3884</a>
+              <span class="small muted" style="display:block;margin-top:.2rem">Fax: (863) 853-9506</span>
+            </p>
+            <div class="cta" style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn" href="tel:+18638583884">Call Now</a>
+              <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">Schedule</a>
+              <a class="btn" href="https://maps.apple.com/?q=1230%20W.%20Daughtery%20Rd%20Lakeland%20FL%2033810" target="_blank" rel="noopener">Directions</a>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- RIGHT: Schedule Card -->
+      <div class="card" id="schedule" aria-labelledby="scheduleTitle">
+        <h2 id="scheduleTitle">Schedule</h2>
+        <p class="muted small">Book in seconds. Your appointment syncs directly with our EMR.</p>
 
-    <div class="copyright_part">
-      <div class="container">
-        <div class="row align-items-center">
-          <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> WellPlus Medical All rights reserved 
-</p>
-          
+        <div id="scheduler-wrap" style="position:relative">
+          <iframe id="elationFrame" src="https://app.elationemr.com/book/1074004643938308" title="Schedule with Wellplus"
+                  style="width:100%;height:720px;border:1px solid var(--line);border-radius:12px;background:#fff"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div id="scheduler-fallback" style="display:none;margin-top:8px">
+            <div class="card" style="background:#fff;border:1px dashed var(--line)">
+              <p style="margin:0 0 8px;color:#475569">It looks like our embedded scheduler is blocked by the browser or provider settings.</p>
+              <div class="cta" style="display:flex;gap:10px;flex-wrap:wrap">
+                <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">Open Scheduler in a New Tab</a>
+                <a class="btn" href="tel:+18137825518">Call Zephyrhills</a>
+                <a class="btn" href="tel:+18638583884">Call Lakeland</a>
+              </div>
+              <p class="small muted" style="margin-top:8px">Tip: Hosting the site over HTTPS (not file://) improves compatibility for embedded scheduling.</p>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          (function() {
+            const iframe = document.getElementById('elationFrame');
+            const fallback = document.getElementById('scheduler-fallback');
+            let loaded = false;
+            iframe.addEventListener('load', function() { loaded = true; });
+            // After 3.5s, if the frame didn't load, show fallback
+            setTimeout(function() {
+              try {
+                // Accessing contentWindow may throw when blocked; we use loaded flag too
+                if (!loaded) throw new Error('not loaded');
+              } catch (e) {
+                fallback.style.display = 'block';
+                iframe.style.display = 'none';
+              }
+            }, 3500);
+          })();
+        </script>
+        <p class="small muted" style="margin-top:8px">If you don't see the scheduler, <a href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  
+<section id="services">
+  <div class="wrap">
+    <div class="card">
+      <h2 style="text-align:center">Comprehensive Primary Care Services</h2>
+      <style>
+        .svc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+        @media(min-width:860px){.svc-grid{grid-template-columns:1fr 1fr}}
+        .svc{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+        .svc svg{width:20px;height:20px;stroke:#0f172a}
+        .svc strong{display:block}
+        .svc .muted{display:block;margin-top:2px}
+      </style>
+      <div class="svc-grid">
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Same-day Visits & Walk-ins</strong><span class="muted">Quick access when you need care — no appointment required.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Annual Physicals & Wellness Exams</strong><span class="muted">Preventive checkups, including Medicare Annual Wellness Visits.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Chronic Disease Management</strong><span class="muted">Support for diabetes, hypertension, COPD, heart disease, and more.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Weight Management & Obesity Medicine</strong><span class="muted">Physician-guided weight loss treatment and lifestyle support.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Women’s Health</strong><span class="muted">Pap smears, well-woman exams, and preventive screenings.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Joint Injections</strong><span class="muted">Relief for arthritis, tendonitis, and joint pain.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Dermatologic Procedures</strong><span class="muted">Punch & excision biopsies for skin lesions and conditions.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Acute Care</strong><span class="muted">Treatment for infections, rashes, and minor injuries.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Telehealth & E‑visits</strong><span class="muted">Convenient care from the comfort of home.</span></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+          <div><strong>Care Coordination & Medications</strong><span class="muted">Streamlined follow‑up, prescriptions, and referrals.</span></div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+  <!-- CCM & RPM -->
+  <section id="programs">
+    <div class="wrap grid two">
+      <div class="card">
+        <h2>Chronic Care Management (CCM)</h2>
+        <p>For Medicare patients with <strong>2+ chronic conditions</strong> (e.g., diabetes, hypertension, heart disease, COPD, arthritis).</p>
+        <ul>
+          <li><strong>24/7 access</strong> to our care team for urgent questions</li>
+          <li><strong>Monthly check-ins</strong> between visits to keep you on track</li>
+          <li><strong>Personalized care plan</strong> shared across your providers</li>
+          <li><strong>Medication & appointment coordination</strong> to help avoid ER visits</li>
+        </ul>
+        <p class="small muted">Medicare covers CCM; standard coinsurance may apply depending on your supplemental coverage.</p>
+      </div>
+      <div class="card">
+        <h2>Remote Patient Monitoring (RPM)</h2>
+        <p>Connected devices (blood pressure, glucose, scale) send readings to our clinic so we can respond early.</p>
+        <ul>
+          <li>Simple devices, easy setup</li>
+          <li>Daily / near-real-time review by our team</li>
+          <li>Early interventions to prevent complications</li>
+          <li>Works great alongside CCM</li>
+        </ul>
+        <p class="small muted">Medicare coverage available; device/monitoring cost-share may vary.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+      <div>© <span id="yr"></span> Wellplus Medical Group. All rights reserved.</div>
+      <div class="small">Email: <a href="mailto:contact@wellplusmedical.com">contact@wellplusmedical.com</a></div>
+    </div>
   </footer>
-    <!-- footer part end-->
 
-    <!-- jquery plugins here-->
-
-    <script src="js/jquery-1.12.1.min.js"></script>
-    <!-- popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- owl carousel js -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <!-- contact js -->
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="js/contact.js"></script>
-    <!-- custom js -->
-    <script src="js/custom.js"></script>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})}
+      });
+    });
+  </script>
 </body>
-
 </html>
