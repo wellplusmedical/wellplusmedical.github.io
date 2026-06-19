@@ -298,11 +298,14 @@
         box-shadow:0 4px 6px rgba(0,0,0,0.1)
       }
       .nav-menu.active{display:flex}
-      .nav-menu a{width:100%;text-align:center;padding:12px;border-radius:8px}
+      .nav-menu a, .nav-menu button{width:100%;text-align:center;padding:12px;border-radius:8px}
       .nav-menu a:hover{background:var(--card)}
+      .nav-menu .btn{margin-top:2px}
+      .nav-menu .btn:hover{opacity:1;background:#f1f7fc}
+      .nav-menu .btn.primary:hover{background:var(--brand2);color:#fff}
     }
     
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border:1px solid var(--brand);border-radius:999px;font-weight:700;background:#fff;min-height:44px;text-align:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border:1px solid var(--brand);border-radius:999px;font-weight:700;font-family:inherit;font-size:inherit;cursor:pointer;color:var(--brand);background:#fff;min-height:44px;text-align:center}
     .btn.primary{background:var(--brand);color:#fff}
     .btn:hover{text-decoration:none;opacity:0.9}
     
@@ -430,6 +433,28 @@
       body{padding-bottom:80px}
     }
 
+    /* Call location chooser */
+    .call-sheet{position:fixed;inset:0;z-index:50;display:none}
+    .call-sheet.open{display:flex;flex-direction:column;justify-content:flex-end}
+    .call-sheet-backdrop{position:fixed;inset:0;background:rgba(2,6,23,.55)}
+    .call-sheet-panel{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;background:#fff;border-radius:18px 18px 0 0;padding:16px 16px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(2,6,23,.22);animation:callRise .2s ease}
+    @keyframes callRise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .call-sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:8px}
+    .call-sheet-head h3{margin:0;font-size:17px;color:var(--brand)}
+    .call-sheet-x{background:none;border:none;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;min-width:40px;min-height:40px;border-radius:8px}
+    .call-sheet-x:hover{background:#f1f5f9}
+    .call-opt{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;margin:8px 0;background:#fff;min-height:44px}
+    .call-opt:hover{text-decoration:none;background:#f8fafc;border-color:#cbd5e1}
+    .call-opt-name{display:block;font-weight:700;color:#0f172a;font-size:15px}
+    .call-opt-sub{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+    .call-opt-num{font-weight:700;color:var(--brand);white-space:nowrap}
+    .call-sheet-cancel{width:100%;margin-top:8px;padding:12px;border:1px solid var(--line);border-radius:999px;background:#f8fafc;font-weight:700;font-family:inherit;font-size:15px;color:#0f172a;min-height:44px;cursor:pointer}
+    .call-sheet-cancel:hover{background:#eef2f7}
+    @media(min-width:769px){
+      .call-sheet.open{justify-content:center;align-items:center}
+      .call-sheet-panel{border-radius:16px;max-width:400px;padding:18px}
+    }
+
     footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
   </style>
 </head>
@@ -449,7 +474,7 @@
         <a href="#insurance">Insurance</a>
         <a href="#locations">Locations</a>
         <a href="#programs">CCM & RPM</a>
-        <a class="btn" href="tel:+18137825518">Call</a>
+        <button class="btn" type="button" data-call-trigger>Call</button>
         <a class="btn primary" href="#schedule">Schedule</a>
       </nav>
     </div>
@@ -1031,14 +1056,38 @@
 
   <!-- Sticky call/book bar (mobile only) -->
   <div class="mobile-cta-bar" role="navigation" aria-label="Quick actions">
-    <a class="btn" href="tel:+18137825518" aria-label="Call Wellplus Medical Group">
+    <button class="btn" type="button" data-call-trigger aria-label="Choose a location to call">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       Call
-    </a>
+    </button>
     <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener" aria-label="Book an appointment online">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
       Book Appointment
     </a>
+  </div>
+
+  <!-- Call location chooser -->
+  <div class="call-sheet" id="callSheet">
+    <div class="call-sheet-backdrop" data-close></div>
+    <div class="call-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="callSheetTitle">
+      <div class="call-sheet-head">
+        <h3 id="callSheetTitle">Which location would you like to call?</h3>
+        <button class="call-sheet-x" type="button" data-close aria-label="Close">&times;</button>
+      </div>
+      <a class="call-opt" href="tel:+18137825518">
+        <span><span class="call-opt-name">Zephyrhills</span><span class="call-opt-sub">6151 Fort King Rd</span></span>
+        <span class="call-opt-num">(813) 782-5518</span>
+      </a>
+      <a class="call-opt" href="tel:+18638583884">
+        <span><span class="call-opt-name">Lakeland</span><span class="call-opt-sub">1230 W. Daughtery Rd</span></span>
+        <span class="call-opt-num">(863) 858-3884</span>
+      </a>
+      <a class="call-opt" href="tel:+18137825518">
+        <span><span class="call-opt-name">Lutz</span><span class="call-opt-sub">17863 Hunting Bow Cir, Ste 101</span></span>
+        <span class="call-opt-num">(813) 782-5518</span>
+      </a>
+      <button class="call-sheet-cancel" type="button" data-close>Cancel</button>
+    </div>
   </div>
 
   <script>
@@ -1066,6 +1115,38 @@
         if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})}
       });
     });
+
+    // Call location chooser
+    (function(){
+      var sheet=document.getElementById('callSheet');
+      if(!sheet) return;
+      var lastTrigger=null;
+      function openSheet(){
+        navMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded','false');
+        sheet.classList.add('open');
+        document.body.style.overflow='hidden';
+        var first=sheet.querySelector('.call-opt');
+        if(first){first.focus();}
+      }
+      function closeSheet(){
+        sheet.classList.remove('open');
+        document.body.style.overflow='';
+        if(lastTrigger){lastTrigger.focus();lastTrigger=null;}
+      }
+      document.querySelectorAll('[data-call-trigger]').forEach(function(btn){
+        btn.addEventListener('click',function(e){e.preventDefault();lastTrigger=btn;openSheet();});
+      });
+      sheet.querySelectorAll('[data-close]').forEach(function(el){
+        el.addEventListener('click',closeSheet);
+      });
+      sheet.querySelectorAll('.call-opt').forEach(function(a){
+        a.addEventListener('click',function(){setTimeout(closeSheet,60);});
+      });
+      document.addEventListener('keydown',function(e){
+        if(e.key==='Escape'&&sheet.classList.contains('open')){closeSheet();}
+      });
+    })();
   </script>
 </body>
 </html>
