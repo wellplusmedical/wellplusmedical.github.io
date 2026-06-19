@@ -138,8 +138,7 @@
         "geo": {"@type": "GeoCoordinates","latitude": "28.1490","longitude": "-82.5180"},
         "telephone": "+18137825518",
         "openingHoursSpecification": [
-          {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"09:00","closes":"17:00"},
-          {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
+          {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}
         ],
         "url": "https://wellplusmedical.com#lutz"
       }
@@ -208,7 +207,7 @@
         "name": "What are your clinic hours?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our Zephyrhills and Lakeland clinics are open in person Monday through Friday from 9:00 AM to 5:00 PM. Our Lutz clinic at 17863 Hunting Bow Cir, Suite 101 is open Friday from 9:00 AM to 5:00 PM and Saturday from 9:00 AM to 2:00 PM. All three locations offer 24/7 on-call support for after-hours needs."
+          "text": "Our Zephyrhills and Lakeland clinics are open in person Monday through Friday from 9:00 AM to 5:00 PM. Our Lutz clinic at 17863 Hunting Bow Cir, Suite 101 is open Saturday from 8:00 AM to 2:00 PM. All three locations offer 24/7 on-call support for after-hours needs."
         }
       },
       {
@@ -365,49 +364,6 @@
       .svc-grid{grid-template-columns:1fr 1fr;gap:12px}
     }
     
-    /* Reviews Slider */
-    .reviews-slider{
-      overflow:hidden;
-      position:relative;
-      padding:20px 0
-    }
-    .reviews-track{
-      display:flex;
-      gap:24px;
-      animation:scroll 140s linear infinite;
-      width:max-content
-    }
-    .reviews-track:hover{
-      animation-play-state:paused
-    }
-    .review-card{
-      background:#fff;
-      border-radius:12px;
-      padding:24px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      width:380px;
-      flex-shrink:0;
-      border:1px solid var(--line)
-    }
-    .review-card .stars{
-      font-size:18px;
-      margin-bottom:12px
-    }
-    .review-card p{
-      color:var(--text);
-      line-height:1.6;
-      margin:0 0 16px;
-      font-style:italic
-    }
-    .review-card strong{
-      color:var(--brand);
-      font-size:14px
-    }
-    @keyframes scroll{
-      0%{transform:translateX(0)}
-      100%{transform:translateX(calc(-380px * 33 - 24px * 33))}
-    }
-    
     @media(max-width:768px){
       section{padding:24px 0}
       .hero{padding:32px 0 20px}
@@ -416,13 +372,6 @@
       .loc-cta{gap:8px}
       .loc-cta .btn{flex:1 1 calc(50% - 4px)}
       .loc-cta .btn.primary{flex-basis:100%;order:-1}
-      .call-row{flex-direction:column}
-      .call-row .btn{width:100%}
-      .review-card{width:300px;padding:20px}
-      @keyframes scroll{
-        0%{transform:translateX(0)}
-        100%{transform:translateX(calc(-300px * 33 - 24px * 33))}
-      }
     }
     
     /* Mobile sticky action bar */
@@ -513,7 +462,22 @@
           </div>
 
           <p style="margin:.15rem 0 .85rem;color:#475569;font-size:.98em">24/7 on-call support • Walk-ins welcome • Most major insurances accepted</p>
-          
+
+          <!-- Star rating moved up -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.75rem;flex-wrap:wrap">
+            <div style="display:inline-flex;align-items:center;gap:6px;background:#fff5e6;border:1px solid #ffd966;border-radius:8px;padding:8px 12px">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span style="font-weight:700;color:#0f172a">4.9</span>
+              <span style="color:#64748b;font-size:14px">rating · 173 Google reviews</span>
+            </div>
+            <!-- Telehealth callout -->
+            <div style="display:inline-flex;align-items:center;gap:7px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#16a34a" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M17 7V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2"/><circle cx="12" cy="14" r="2"/></svg>
+              <span style="font-weight:700;color:#15803d;font-size:14px">Telehealth available</span>
+              <a href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener" style="font-size:12px;color:#16a34a;font-weight:600;border-bottom:1px solid #16a34a">Book online</a>
+            </div>
+          </div>
+
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin:.75rem 0" id="insurance" itemscope itemtype="https://schema.org/MedicalBusiness">
             <meta itemprop="paymentAccepted" content="Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare">
             <div style="font-size:.85em;color:#64748b;margin-bottom:10px;font-weight:600">Insurance Plans Accepted:</div>
@@ -534,14 +498,6 @@
             </div>
           </div>
           
-          <div style="display:inline-flex;align-items:center;gap:6px;background:#fff5e6;border:1px solid #ffd966;border-radius:8px;padding:8px 12px;margin-top:8px">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-            <span style="font-weight:600;color:#0f172a">4.9</span>
-            <span style="color:#64748b;font-size:14px">rating (173 reviews)</span>
-          </div>
-
           <div style="margin-top:14px">
             <a class="btn primary" href="#locations" style="width:100%">View Our 3 Locations &amp; Hours</a>
           </div>
@@ -573,21 +529,13 @@
         
         <div style="text-align:center">
           <p style="color:#64748b;margin:0 0 16px"><strong>Prefer to call?</strong></p>
-          <div class="call-row" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <a href="tel:+18137825518" class="btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              Zephyrhills &amp; Lutz: (813) 782-5518
-            </a>
-            <a href="tel:+18638583884" class="btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              Lakeland: (863) 858-3884
-            </a>
-          </div>
-          <p class="small muted" style="margin-top:12px">24/7 on-call support available for all locations</p>
+          <button class="btn" type="button" data-call-trigger style="width:100%;max-width:340px">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Call a Location
+          </button>
+          <p class="small muted" style="margin-top:12px">Pick your office. 24/7 on-call support is available for all locations.</p>
         </div>
       </div>
     </div>
@@ -674,7 +622,7 @@
           </div>
           <div class="loc-hours">
             <div class="lbl">In-person hours</div>
-            <div class="small" style="color:#334155">Friday, 9:00 AM to 5:00 PM<br>Saturday, 9:00 AM to 2:00 PM</div>
+            <div class="small" style="color:#334155">Saturday, 8:00 AM to 2:00 PM</div>
           </div>
           <span class="loc-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>24/7 on-call support</span>
           <div class="loc-cta">
@@ -689,211 +637,77 @@
   </section>
 
   <!-- Patient Reviews -->
-  <section id="reviews" style="background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 50%,#f8fafc 100%);padding:48px 0" itemscope itemtype="https://schema.org/MedicalBusiness">
+  <section id="reviews" style="background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 50%,#f8fafc 100%);padding:48px 0">
     <div class="wrap">
-      <h2 style="text-align:center;margin-bottom:12px">Patient Reviews & Testimonials - Wellplus Medical Group</h2>
-      <p style="text-align:center;color:var(--muted);margin-bottom:32px">Real experiences from our valued patients in Zephyrhills, Lakeland, and Lutz, FL</p>
-      
-      <div class="reviews-slider">
-        <div class="reviews-track">
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Since moving from N.C. in October I been trying to find a family doctor who cared enough about me as a person & for my health. I got established & seen Dr. Patel. He was super friendly, kind, caring & concerned. Thank you for making it a wonderful experience. And I'm happy to say I found my new family practice!"</p>
-            <strong>- Olivia Small</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I needed a primary care physician because I was new to the area and Dr. Pansara is wonderful! He is friendly and professional and his staff makes your visit such a pleasant experience. I always leave there knowing I got the best care possible. I'm very glad to have found him and his staff."</p>
-            <strong>- Nancy Wagner</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Patel makes me feel comfortable sharing my health issues with him. He seems to really care about my health and trying to find out what's going on. I'm very happy with him as my doctor. Also the staff there are very friendly and do a great job. I would recommend this doctor."</p>
-            <strong>- Misty Harrell</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Pansara is very professional and takes the time to listen to me at every visit. He never makes me feel like he has no time for me! As a healthcare professional myself I know how important it is to have a provider that will take the time to really listen."</p>
-            <strong>- Cindy Duarte</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr Patel showed concern and compassion with my pain issues. My A1C had increased a little and he was very patient in discussing it with me emphasizing a balanced diet and to curb carb intake. All in all my visit ended on a positive note. I like him very much and appreciate his time spent with me."</p>
-            <strong>- Dolores Callahan</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr Pansara is the best primary physician I've ever had before! He is very down to earth, treats you like a real person, and actually listens to what I have to say. I never feel rushed when I go here and they usually work me in when available."</p>
-            <strong>- CHEFTIMP</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Patel is always friendly, never makes you feel like he's hurrying you to get to another patient. He takes time to explain what's going on and how he feels he'll take care of you."</p>
-            <strong>- Ike and Charlene Eigenhuis</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Pansara spent quality time with me asking questions about my health from head to toe. He gave great advice and suggestions and I felt totally comfortable having a conversation about my whole being. I would encourage anyone to consider having him as their primary care physician."</p>
-            <strong>- Suzette Williamson</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Great physician! Was able to get an appointment right away and he was able to take care of my issue without having to send me to a specialist. Very caring and compassionate. You don't see that very much these days. Highly recommend."</p>
-            <strong>- Terri</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I always get great service when I see Dr. Pansara. He listens to all of your concerns and answers your questions. Most doctors don't take the time to be generally concerned, but he does. Also, has very friendly staff."</p>
-            <strong>- Tracey Badgley Ortiz</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr Patel is knowledgeable and takes the time to discuss all of your concerns. Answers all of your questions. He is very personable and easy to talk to, he seems concerned about your health. His office staff is terrific!"</p>
-            <strong>- Char Pencarinha</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I cannot say enough about this place. Starting from my amazing doctor Dr. Pansara. Never rushing to finish with you, always listening and the entire staff are so great, very polite, attentive and professional. Extremely happy here."</p>
-            <strong>- Maritza Rivera</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Patel is the best PCP I have ever used. He and his staff are very professional, have addressed my issues, and are quick to respond to questions and requests for prescription refills."</p>
-            <strong>- Lynn Calkin</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Pansara was super sweet and listened to all my concerns. The staff was also very friendly and fun to talk to. The wait time was minimal. I would definitely recommend this office to anyone."</p>
-            <strong>- Doriz Laboy</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Patel was very kind and caring. He got me in the same day I called because I was feeling poorly. He also called me back to report my X-ray findings and to give me additional instructions. What a gem we have in Winterhaven!"</p>
-            <strong>- Lori Clarke</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"We finally found our PCP! So glad we chose him to be our doctor. Very pleasant, warm, smart and knowledgeable of his craft. Answers to all my questions with patience and in a way I can understand."</p>
-            <strong>- winjilyn paculanan</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Awesome Doctor. Dr. Patel listens to his patients, provides educational information and explains test results and any thing you need to do to stay happy and healthy in a way you can understand."</p>
-            <strong>- U-Neek Hair Salon</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"He's a wonderful doctor, he cares about his patients and calls to make sure they are doing well if seen for something that concerns him. I recommend him and the SE Winter Haven Clinic to anyone looking for a great PCP."</p>
-            <strong>- Penny Burch</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Patel takes care of my wife and I both. He has been such a breath of fresh air after dealing with the Dr.'s in S.C./ Ga. where we're from. I really can't say enough positive things about the man."</p>
-            <strong>- OU812</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Pansara and the girls are so attentive and professional and it's such a blessing. I'm so thankful for him. We would follow Dr. Pansara most likely anywhere in Polk county he goes."</p>
-            <strong>- Jeff and Dee Stewart</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I love coming here. Great staff, very helpful with appointments and even getting you worked in if need be. Drs are compassionate. They don't rush through your visit. Very clean setting."</p>
-            <strong>- Teri Long</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Pansara is the best Doctor. He is very nice and humble. He treats his patients very well. I highly recommend him."</p>
-            <strong>- Divyesh Gandhi</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. Patel really care about his patients as exhibited in his care for me. He knows the medical history of his patients which is important when treating a patient. I vote him the physician of the year."</p>
-            <strong>- Jane Parker</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I was a walk in that day. Called at 10:30, had an appt at 2:30. I checked in online right before leaving my house. 10 minute wait to be seen. I am very happy with my doctor's office staff and him as well."</p>
-            <strong>- Ericka Joppien</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Always a great experience, starting with check in to checkout. Dr. Patel is efficient, attentive and obviously cares a great deal about his patients."</p>
-            <strong>- Lesco Rogers, M.D.</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Dr. was very thorough. I was very impressed. This was my first visit. Nurse Ena was great as well as the receptionist. They were both professional and very welcoming."</p>
-            <strong>- Louise Lingafelter</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I have recommended Dr. Patel to many of my friends. He is very good. He takes time with you. If you don't have a Dr in Winter Haven, I highly recommend him."</p>
-            <strong>- Randy McDaniel</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Great communication skills, listens, pleasant, and proactive. I would definitely recommend Dr Pansara to my friends and family."</p>
-            <strong>- menandre muscadin</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I love this office. The employees are always friendly and helpful. And Dr Pansara is great!"</p>
-            <strong>- Amber Caves</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Great knowledgeable friendly Doctor. Staff is amazing."</p>
-            <strong>- Peter Singh</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Best doctor and his staff."</p>
-            <strong>- Surinder Chandhok</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I have a wonderful doctor who cares about me and my family."</p>
-            <strong>- Francisco Samalot</strong>
-          </div>
-          
-          <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"Going to this place becomes a very pleasant experience. Staff is very friendly. They make you feel great. I am so happy I found Dr Pansara as my PCP. I was very sick when I started and he helped me tremendously."</p>
-            <strong>- Diana Collazo</strong>
-          </div>
+      <div style="text-align:center;margin-bottom:32px">
+        <h2 style="margin-bottom:8px">What Our Patients Say</h2>
+        <div style="display:inline-flex;align-items:center;gap:6px;background:#fff5e6;border:1px solid #ffd966;border-radius:8px;padding:7px 14px;margin-bottom:10px">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span style="font-weight:700;color:#0f172a;font-size:15px">4.9</span>
+          <span style="color:#64748b;font-size:13px">· 173 reviews</span>
         </div>
+        <p style="color:var(--muted);margin:0">Real experiences from our patients across Zephyrhills, Lakeland, and Lutz, FL</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:28px" itemscope itemtype="https://schema.org/MedicalClinic">
+        <meta itemprop="name" content="Wellplus Medical Group">
+
+        <div style="background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);box-shadow:0 4px 12px rgba(2,6,23,.07)" itemscope itemprop="review" itemtype="https://schema.org/Review">
+          <meta itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" content="5"><meta itemprop="ratingValue" content="5">
+          <div style="display:flex;gap:2px;margin-bottom:12px"><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p itemprop="reviewBody" style="color:#334155;line-height:1.6;margin:0 0 14px;font-size:14px;font-style:italic">"Dr. Patel is always friendly, never makes you feel like he's hurrying you to get to another patient. He takes time to explain what's going on and how he feels he'll take care of you."</p>
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="font-weight:700;font-size:13px;color:var(--brand)">Ike and Charlene Eigenhuis</span></span>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);box-shadow:0 4px 12px rgba(2,6,23,.07)" itemscope itemprop="review" itemtype="https://schema.org/Review">
+          <meta itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" content="5"><meta itemprop="ratingValue" content="5">
+          <div style="display:flex;gap:2px;margin-bottom:12px"><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p itemprop="reviewBody" style="color:#334155;line-height:1.6;margin:0 0 14px;font-size:14px;font-style:italic">"Dr. Pansara is very professional and takes the time to listen to me at every visit. He never makes me feel like he has no time for me! As a healthcare professional myself I know how important it is to have a provider that will take the time to really listen."</p>
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="font-weight:700;font-size:13px;color:var(--brand)">Cindy Duarte</span></span>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);box-shadow:0 4px 12px rgba(2,6,23,.07)" itemscope itemprop="review" itemtype="https://schema.org/Review">
+          <meta itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" content="5"><meta itemprop="ratingValue" content="5">
+          <div style="display:flex;gap:2px;margin-bottom:12px"><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p itemprop="reviewBody" style="color:#334155;line-height:1.6;margin:0 0 14px;font-size:14px;font-style:italic">"Dr. Patel is the best PCP I have ever used. He and his staff are very professional, have addressed my issues, and are quick to respond to questions and requests for prescription refills."</p>
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="font-weight:700;font-size:13px;color:var(--brand)">Lynn Calkin</span></span>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);box-shadow:0 4px 12px rgba(2,6,23,.07)" itemscope itemprop="review" itemtype="https://schema.org/Review">
+          <meta itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" content="5"><meta itemprop="ratingValue" content="5">
+          <div style="display:flex;gap:2px;margin-bottom:12px"><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p itemprop="reviewBody" style="color:#334155;line-height:1.6;margin:0 0 14px;font-size:14px;font-style:italic">"I cannot say enough about this place. Starting from my amazing doctor Dr. Pansara. Never rushing to finish with you, always listening and the entire staff are so great, very polite, attentive and professional. Extremely happy here."</p>
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="font-weight:700;font-size:13px;color:var(--brand)">Maritza Rivera</span></span>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);box-shadow:0 4px 12px rgba(2,6,23,.07)" itemscope itemprop="review" itemtype="https://schema.org/Review">
+          <meta itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" content="5"><meta itemprop="ratingValue" content="5">
+          <div style="display:flex;gap:2px;margin-bottom:12px"><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p itemprop="reviewBody" style="color:#334155;line-height:1.6;margin:0 0 14px;font-size:14px;font-style:italic">"Always a great experience, starting with check in to checkout. Dr. Patel is efficient, attentive and obviously cares a great deal about his patients."</p>
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="font-weight:700;font-size:13px;color:var(--brand)">Lesco Rogers, M.D.</span></span>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);box-shadow:0 4px 12px rgba(2,6,23,.07)" itemscope itemprop="review" itemtype="https://schema.org/Review">
+          <meta itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" content="5"><meta itemprop="ratingValue" content="5">
+          <div style="display:flex;gap:2px;margin-bottom:12px"><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p itemprop="reviewBody" style="color:#334155;line-height:1.6;margin:0 0 14px;font-size:14px;font-style:italic">"Going to this place becomes a very pleasant experience. Staff is very friendly. They make you feel great. I am so happy I found Dr Pansara as my PCP. I was very sick when I started and he helped me tremendously."</p>
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="font-weight:700;font-size:13px;color:var(--brand)">Diana Collazo</span></span>
+        </div>
+      </div>
+
+      <div style="text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://share.google/cPtWDhQYKOFEwuGxz" target="_blank" rel="noopener" class="btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          All Zephyrhills Reviews
+        </a>
+        <a href="https://share.google/dBDTp8zyityY3NZRC" target="_blank" rel="noopener" class="btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          All Lakeland Reviews
+        </a>
       </div>
     </div>
   </section>
@@ -961,6 +775,13 @@
           <li><strong>Medication & appointment coordination</strong> to help avoid ER visits</li>
         </ul>
         <p class="small muted">Medicare covers CCM; standard coinsurance may apply depending on your supplemental coverage.</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--line)">
+          <p style="margin:0 0 10px;font-size:14px;color:#334155"><strong>Think you qualify?</strong> Most Medicare patients with 2 or more chronic conditions are eligible.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn primary" type="button" data-call-trigger style="flex:1;min-width:140px">Call to Enroll</button>
+            <a class="btn" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener" style="flex:1;min-width:140px">Book a Visit</a>
+          </div>
+        </div>
       </div>
       <div class="card">
         <h2>Remote Patient Monitoring (RPM) Services</h2>
@@ -1021,7 +842,7 @@
           <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">What are your clinic hours?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" style="color:#475569;line-height:1.6">
-              <p>Our Zephyrhills and Lakeland clinics are open in person Monday through Friday from 9:00 AM to 5:00 PM. Our Lutz clinic at 17863 Hunting Bow Cir, Suite 101 is open Friday from 9:00 AM to 5:00 PM and Saturday from 9:00 AM to 2:00 PM. All three locations offer 24/7 on-call support for after-hours needs.</p>
+              <p>Our Zephyrhills and Lakeland clinics are open in person Monday through Friday from 9:00 AM to 5:00 PM. Our Lutz clinic at 17863 Hunting Bow Cir, Suite 101 is open Saturday from 8:00 AM to 2:00 PM. All three locations offer 24/7 on-call support for after-hours needs.</p>
             </div>
           </div>
         </div>
