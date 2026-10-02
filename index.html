@@ -31,6 +31,8 @@
   <meta name="twitter:image" content="https://wellplusmedical.com/assets/wellplus-logo.png">
   <meta name="twitter:site" content="@WellplusMedical">
   
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-+TqqibIjTwRiWL5GiG9/3lr4E+qSj0CPwF6w4R8Agy0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" href="assets/wellplus-logo-icon.png">
   <link rel="canonical" href="https://wellplusmedical.com">
   
@@ -48,7 +50,7 @@
     "email": "info@wellplusmedical.com",
     "priceRange": "$$",
     "medicalSpecialty": ["Family Practice", "Primary Care", "Obesity Medicine"],
-    "paymentAccepted": "Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare",
+    "paymentAccepted": "Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare",
     "areaServed": [
       {"@type":"City","name":"Zephyrhills"},
       {"@type":"City","name":"Lakeland"},
@@ -74,6 +76,8 @@
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Primary Care Services"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Same-Day Appointments and Walk-In Services"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Annual Physical Examinations"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Well-Child Visits and Pediatric Care"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "School and Sports Physicals"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Chronic Disease Management"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Weight Management and Obesity Medicine"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Women's Health Services"}},
@@ -137,6 +141,7 @@
         },
         "geo": {"@type": "GeoCoordinates","latitude": "28.1490","longitude": "-82.5180"},
         "telephone": "+18137825518",
+        "faxNumber": "+18137887306",
         "openingHoursSpecification": [
           {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}
         ],
@@ -155,7 +160,8 @@
         "@type": "Physician",
         "name": "Dr. Omprakash Pansara",
         "url": "https://health.usnews.com/doctors/omprakash-pansara-1228720",
-        "medicalSpecialty": "Family Medicine"
+        "medicalSpecialty": ["Family Medicine", "Obesity Medicine"],
+        "memberOf": {"@type": "MedicalOrganization","name": "American Board of Obesity Medicine"}
       }
     ],
     "sameAs": [
@@ -175,7 +181,7 @@
         "name": "Do you accept Medicare and other insurance plans?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage."
+          "text": "Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage."
         }
       },
       {
@@ -191,7 +197,15 @@
         "name": "What services do you provide at your family practice?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We provide comprehensive primary care including annual physicals, chronic disease management (diabetes, hypertension, COPD, heart disease), weight management, women's health services, joint injections, dermatologic procedures, acute care for infections and injuries, telehealth visits, and Medicare Annual Wellness Visits. We also offer Chronic Care Management (CCM) and Remote Patient Monitoring (RPM) programs for eligible Medicare patients."
+          "text": "We provide comprehensive primary care for patients of all ages including annual physicals, well-child visits and pediatric care, school and sports physicals, chronic disease management (diabetes, hypertension, COPD, heart disease), weight management, women's health services, joint injections, dermatologic procedures, acute care for infections and injuries, telehealth visits, and Medicare Annual Wellness Visits. We also offer Chronic Care Management (CCM) and Remote Patient Monitoring (RPM) programs for eligible Medicare patients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer telehealth visits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Video visits and phone visits are available for follow-ups, results reviews, medication refills, and many minor concerns. If your concern needs a physical exam or tests, an in-person visit may be needed. To book, use our Book Online link or call any of our offices: Zephyrhills or Lutz at (813) 782-5518, or Lakeland at (863) 858-3884. Telehealth coverage varies by plan — call us to check."
         }
       },
       {
@@ -215,7 +229,7 @@
         "name": "Are your doctors board certified?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, both Dr. Parth Patel and Dr. Omprakash Pansara are Board Certified in Family Medicine. Dr. Patel is also a Diplomate of the American Board of Obesity Medicine, providing specialized expertise in weight management and obesity treatment."
+          "text": "Yes, both Dr. Parth Patel and Dr. Omprakash Pansara are Board Certified in Family Medicine. Both are also Diplomates of the American Board of Obesity Medicine, providing specialized expertise in weight management and obesity treatment."
         }
       },
       {
@@ -434,7 +448,7 @@
       <div class="card" style="background:#fff">
         <p class="pill">Family Practice • Walk-In Clinic</p>
         <h1 class="title">Board Certified Family Doctors in Zephyrhills, Lakeland & Lutz, FL for Same-Day Primary Care</h1>
-        <p style="color:#475569;font-size:1.05em;line-height:1.5;margin:.5em 0">Comprehensive family medicine, walk-in clinic services, and chronic disease management across three convenient Tampa Bay locations. Medicare and major insurances accepted.</p>
+        <p style="color:#475569;font-size:1.05em;line-height:1.5;margin:.5em 0">Comprehensive family medicine for patients of all ages, walk-in clinic services, and chronic disease management across three convenient Tampa Bay locations. Medicare and major insurances accepted.</p>
         <div style="height:1px;background:var(--line);margin:.5rem 0 .7rem"></div>
         <div style="margin:.5rem 0 0">
           <div style="font-weight:700;font-size:1.25em;line-height:1.35">
@@ -479,7 +493,7 @@
           </div>
 
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin:.75rem 0" id="insurance" itemscope itemtype="https://schema.org/MedicalBusiness">
-            <meta itemprop="paymentAccepted" content="Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare">
+            <meta itemprop="paymentAccepted" content="Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare">
             <div style="font-size:.85em;color:#64748b;margin-bottom:10px;font-weight:600">Insurance Plans Accepted:</div>
             <div style="display:flex;flex-wrap:wrap;gap:8px" role="list" aria-label="Accepted insurance providers">
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Medicare</span>
@@ -489,6 +503,8 @@
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Optimum Healthcare</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Freedom Health</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Devoted Health</span>
+              <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Ultimate Health Plans</span>
+              <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">CarePlus Health Plans</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Florida Blue</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Aetna</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Cigna</span>
@@ -620,6 +636,7 @@
             <svg viewBox="0 0 24 24" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <a href="tel:+18137825518">(813) 782-5518</a>
           </div>
+          <div class="loc-fax">Fax (813) 788-7306</div>
           <div class="loc-hours">
             <div class="lbl">In-person hours</div>
             <div class="small" style="color:#334155">Saturday, 8:00 AM to 2:00 PM</div>
@@ -728,6 +745,14 @@
           </div>
           <div class="svc">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>Well-Child Visits & Pediatric Care</strong><span class="muted">Checkups and developmental screening for infants, children, and teens.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
+            <div><strong>School & Sports Physicals</strong><span class="muted">Physicals for school enrollment and sports participation.</span></div>
+          </div>
+          <div class="svc">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
             <div><strong>Chronic Disease Management</strong><span class="muted">Support for diabetes, hypertension, COPD, heart disease, and more.</span></div>
           </div>
           <div class="svc">
@@ -752,11 +777,34 @@
           </div>
           <div class="svc">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
-            <div><strong>Telehealth & E‑visits</strong><span class="muted">Convenient care from the comfort of home.</span></div>
+            <div><strong>Telehealth & E‑visits</strong><span class="muted">Video and phone visits for follow-ups, results, refills, and many minor concerns. <a href="#telehealth">How telehealth works</a>.</span></div>
           </div>
           <div class="svc">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="1.5"/></svg>
             <div><strong>Care Coordination & Medications</strong><span class="muted">Streamlined follow‑up, prescriptions, and referrals.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="telehealth">
+    <div class="wrap">
+      <div class="card">
+        <h2>Telehealth: Video &amp; Phone Visits</h2>
+        <p>Can't make it to the office? Video visits and phone visits are available for:</p>
+        <ul>
+          <li><strong>Follow-up visits</strong> for ongoing conditions</li>
+          <li><strong>Reviewing lab and test results</strong> with your doctor</li>
+          <li><strong>Medication refills</strong></li>
+          <li><strong>Many minor concerns</strong> that don't require an exam</li>
+        </ul>
+        <p class="small muted">If your concern needs a physical exam or tests, we may ask you to come in for an in-person visit. Telehealth coverage varies by plan — call us to check.</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--line)">
+          <p style="margin:0 0 10px;font-size:14px;color:#334155"><strong>How to book:</strong> schedule a telehealth visit online or call any of our offices.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn primary" href="https://app.elationemr.com/book/1074004643938308" target="_blank" rel="noopener" style="flex:1;min-width:140px">Book Online</a>
+            <button class="btn" type="button" data-call-trigger style="flex:1;min-width:140px">Call a Location</button>
           </div>
         </div>
       </div>
@@ -806,7 +854,7 @@
           <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">Do you accept Medicare and other insurance plans?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" style="color:#475569;line-height:1.6">
-              <p>Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage.</p>
+              <p>Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage.</p>
             </div>
           </div>
         </div>
@@ -824,7 +872,16 @@
           <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">What services do you provide at your family practice?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" style="color:#475569;line-height:1.6">
-              <p>We provide comprehensive primary care including annual physicals, chronic disease management (diabetes, hypertension, COPD, heart disease), weight management, women's health services, joint injections, dermatologic procedures, acute care for infections and injuries, telehealth visits, and Medicare Annual Wellness Visits. We also offer Chronic Care Management (CCM) and Remote Patient Monitoring (RPM) programs for eligible Medicare patients.</p>
+              <p>We provide comprehensive primary care for patients of all ages including annual physicals, well-child visits and pediatric care, school and sports physicals, chronic disease management (diabetes, hypertension, COPD, heart disease), weight management, women's health services, joint injections, dermatologic procedures, acute care for infections and injuries, telehealth visits, and Medicare Annual Wellness Visits. We also offer Chronic Care Management (CCM) and Remote Patient Monitoring (RPM) programs for eligible Medicare patients.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom:24px">
+          <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">Do you offer telehealth visits?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="color:#475569;line-height:1.6">
+              <p>Yes. Video visits and phone visits are available for follow-ups, results reviews, medication refills, and many minor concerns. If your concern needs a physical exam or tests, an in-person visit may be needed. To book, use our Book Online link or call any of our offices: Zephyrhills or Lutz at (813) 782-5518, or Lakeland at (863) 858-3884. Telehealth coverage varies by plan — call us to check.</p>
             </div>
           </div>
         </div>
@@ -851,7 +908,7 @@
           <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">Are your doctors board certified?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" style="color:#475569;line-height:1.6">
-              <p>Yes, both Dr. Parth Patel and Dr. Omprakash Pansara are Board Certified in Family Medicine. Dr. Patel is also a Diplomate of the American Board of Obesity Medicine, providing specialized expertise in weight management and obesity treatment.</p>
+              <p>Yes, both Dr. Parth Patel and Dr. Omprakash Pansara are Board Certified in Family Medicine. Both are also Diplomates of the American Board of Obesity Medicine, providing specialized expertise in weight management and obesity treatment.</p>
             </div>
           </div>
         </div>
