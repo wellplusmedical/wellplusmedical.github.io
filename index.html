@@ -50,11 +50,7 @@
     "email": "info@wellplusmedical.com",
     "priceRange": "$$",
     "medicalSpecialty": ["Family Practice", "Primary Care", "Obesity Medicine"],
-<<<<<<< HEAD
     "paymentAccepted": "Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Most Cigna plans, CarePlus, Ultimate Health Plans, Curative, Ambetter, Multiplan, Tricare",
-=======
-    "paymentAccepted": "Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare",
->>>>>>> 78335178457e8a7a082223fe674b9fa81451fbe3
     "areaServed": [
       {"@type":"City","name":"Zephyrhills"},
       {"@type":"City","name":"Lakeland"},
@@ -185,11 +181,7 @@
         "name": "Do you accept Medicare and other insurance plans?",
         "acceptedAnswer": {
           "@type": "Answer",
-<<<<<<< HEAD
           "text": "Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, most Cigna plans, CarePlus, Ultimate Health Plans, Curative, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage."
-=======
-          "text": "Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage."
->>>>>>> 78335178457e8a7a082223fe674b9fa81451fbe3
         }
       },
       {
@@ -427,6 +419,77 @@
     }
 
     footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+    /* Enhanced mobile responsiveness */
+    @media(max-width:768px){
+      :root{--pad:16px;--radius:14px}
+      body{padding-bottom:68px}
+      .wrap{padding-left:16px;padding-right:16px}
+      .nav{min-height:62px;padding:8px 0}
+      .brand img{width:126px}
+      .hero{padding:24px 0 14px}
+      .title{font-size:clamp(24px,7vw,34px);line-height:1.12;margin:.15em 0 .35em}
+      h2{font-size:clamp(20px,5.8vw,26px);line-height:1.2}
+      h3{line-height:1.25}
+      .card{padding:16px;border-radius:14px}
+      section{padding:22px 0}
+      .pill{font-size:13px;padding:5px 9px}
+      .btn{min-height:42px;padding:10px 14px;font-size:14px}
+      .loc-card{padding:16px}
+      .loc-cta{gap:8px;padding-top:12px}
+      .loc-cta .btn{flex:1 1 calc(50% - 4px);padding:9px 8px;font-size:13px}
+      .loc-cta .btn.primary{flex-basis:100%}
+      .svc{padding:10px;gap:10px}
+      .svc strong{font-size:14px}
+      .svc .muted{font-size:13px}
+      footer{padding:20px 0 84px;font-size:13px}
+      .mobile-cta-bar{gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -4px 14px rgba(2,6,23,.09)}
+      .mobile-cta-bar .btn{min-height:42px;padding:9px 8px;font-size:14px;border-radius:12px}
+      .mobile-cta-bar svg{width:16px;height:16px}
+      .call-sheet-panel{padding:14px 14px calc(14px + env(safe-area-inset-bottom))}
+      .call-opt{padding:11px 12px}
+      .call-opt-name{font-size:14px}
+      .call-opt-sub{font-size:11px}
+      .call-opt-num{font-size:13px}
+    }
+
+    @media(max-width:480px){
+      :root{--pad:14px}
+      body{padding-bottom:64px}
+      .wrap{padding-left:14px;padding-right:14px}
+      .brand img{width:116px}
+      .menu-toggle{min-width:40px;min-height:40px;padding:6px}
+      .menu-toggle span{width:22px}
+      .hero{padding:18px 0 10px}
+      .title{font-size:clamp(22px,7.4vw,30px)}
+      h2{font-size:clamp(19px,6vw,24px)}
+      .card{padding:14px}
+      section{padding:18px 0}
+      .mobile-cta-bar{padding:7px 10px calc(7px + env(safe-area-inset-bottom));gap:7px}
+      .mobile-cta-bar .btn{min-height:40px;padding:8px 6px;font-size:13px;gap:6px}
+      .mobile-cta-bar svg{width:15px;height:15px}
+      .loc-section{padding:24px 0}
+      .loc-card{padding:14px}
+      .loc-row{font-size:13px}
+      .loc-hours{padding:9px 10px}
+      .loc-badge{font-size:11px;padding:5px 8px}
+      .loc-cta .btn{font-size:12.5px;min-height:40px}
+      .svc-grid{gap:10px}
+      .svc{padding:9px 8px}
+      .svc svg{width:18px;height:18px}
+      .small{font-size:12px}
+    }
+
+    @media(max-width:360px){
+      .wrap{padding-left:12px;padding-right:12px}
+      .brand img{width:108px}
+      .title{font-size:22px}
+      .card{padding:12px}
+      .mobile-cta-bar{padding-left:8px;padding-right:8px}
+      .mobile-cta-bar .btn{font-size:12.5px;padding:7px 5px}
+      .mobile-cta-bar svg{display:none}
+      .loc-cta .btn{flex-basis:100%}
+    }
   </style>
 </head>
 <body>
@@ -501,11 +564,7 @@
           </div>
 
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin:.75rem 0" id="insurance" itemscope itemtype="https://schema.org/MedicalBusiness">
-<<<<<<< HEAD
             <meta itemprop="paymentAccepted" content="Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, Most Cigna plans, CarePlus, Ultimate Health Plans, Curative, Ambetter, Multiplan, Tricare">
-=======
-            <meta itemprop="paymentAccepted" content="Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, Tricare">
->>>>>>> 78335178457e8a7a082223fe674b9fa81451fbe3
             <div style="font-size:.85em;color:#64748b;margin-bottom:10px;font-weight:600">Insurance Plans Accepted:</div>
             <div style="display:flex;flex-wrap:wrap;gap:8px" role="list" aria-label="Accepted insurance providers">
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Medicare</span>
@@ -515,8 +574,6 @@
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Optimum Healthcare</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Freedom Health</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Devoted Health</span>
-              <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Ultimate Health Plans</span>
-              <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">CarePlus Health Plans</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Florida Blue</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Aetna</span>
               <span style="display:inline-block;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:6px;font-size:.88em;color:#0f172a;font-weight:500" role="listitem">Most Cigna plans</span>
@@ -869,11 +926,7 @@
           <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">Do you accept Medicare and other insurance plans?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" style="color:#475569;line-height:1.6">
-<<<<<<< HEAD
               <p>Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, most Cigna plans, CarePlus, Ultimate Health Plans, Curative, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage.</p>
-=======
-              <p>Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Ultimate Health Plans, CarePlus Health Plans, Florida Blue, Aetna, Cigna, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage.</p>
->>>>>>> 78335178457e8a7a082223fe674b9fa81451fbe3
             </div>
           </div>
         </div>
