@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Family Doctor Zephyrhills, Lakeland & Lutz FL | Medicare & Walk-In Clinic | Wellplus Medical Group</title>
-  <meta name="description" content="Board certified family doctors in Zephyrhills, Lakeland & Lutz, FL. Same-day appointments, walk-ins welcome, 24/7 on-call support. Medicare, BCBS, United, Aetna accepted. 4.9 star rating.">
-  <meta name="keywords" content="family practice, walk-in clinic, primary care, Zephyrhills FL, Lakeland FL, Lutz FL, family doctor Lutz, walk-in clinic Lutz, Wesley Chapel, Land O Lakes, Tampa, Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Florida Blue, Aetna, Cigna, chronic care management, remote patient monitoring, same-day appointments, Medicare doctor, Hillsborough County, Pasco County, Polk County, insurance accepted">
+  <meta name="description" content="Board certified family doctors in Zephyrhills, Lakeland & Lutz, FL for Medicare and Medicare Advantage patients: Annual Wellness Visits, chronic care, same-day visits, 24/7 on-call support.">
+  <meta name="keywords" content="family practice, walk-in clinic, primary care, Zephyrhills FL, Lakeland FL, Lutz FL, family doctor Lutz, walk-in clinic Lutz, Wesley Chapel, Land O Lakes, Tampa, Medicare, United Healthcare, Blue Cross Blue Shield, Humana, Florida Blue, Aetna, Cigna, chronic care management, remote patient monitoring, same-day appointments, Medicare doctor, Medicare Advantage, Medicare Annual Wellness Visit, Welcome to Medicare visit, senior primary care, Hillsborough County, Pasco County, Polk County, insurance accepted">
   <meta name="author" content="Wellplus Medical Group">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
@@ -60,7 +60,10 @@
       {"@type":"City","name":"Tampa"},
       {"@type":"City","name":"Dade City"},
       {"@type":"City","name":"Plant City"},
-      {"@type":"City","name":"Winter Haven"}
+      {"@type":"City","name":"Winter Haven"},
+      {"@type":"AdministrativeArea","name":"Pasco County, FL"},
+      {"@type":"AdministrativeArea","name":"Polk County, FL"},
+      {"@type":"AdministrativeArea","name":"Hillsborough County, FL"}
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -86,7 +89,12 @@
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Telehealth and Virtual Visits"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Joint Injections"}},
         {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Dermatologic Procedures"}},
-        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Medicare Annual Wellness Visits"}}
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Medicare Annual Wellness Visits"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Welcome to Medicare Preventive Visit"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Primary Care for Medicare and Medicare Advantage Patients"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Medication Review"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Fall Risk Screening"}},
+        {"@type": "Offer","itemOffered": {"@type": "MedicalProcedure","name": "Memory (Cognitive) Screening"}}
       ]
     },
     "location": [
@@ -182,6 +190,30 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, most Cigna plans, CarePlus, Ultimate Health Plans, Curative, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept Medicare Advantage plans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We accept Medicare, and we work with Medicare Advantage plans from Humana, CarePlus, Devoted Health, Optimum Healthcare, Freedom Health, Ultimate Health Plans, United Healthcare and Aetna. Each company offers many different plans and networks can change, so please call us to check your specific plan before your visit: Zephyrhills or Lutz at (813) 782-5518, or Lakeland at (863) 858-3884."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a Medicare Annual Wellness Visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is a yearly visit focused on prevention. It is not a full head-to-toe physical. We review your health history and your medicines, check things like blood pressure and weight, check for fall risk and memory changes, and make a personal plan to help you stay well. Medicare covers an Annual Wellness Visit once a year (every 12 months). Coverage for other services depends on your plan, and if other problems are checked or treated during the same visit, a copay or coinsurance may apply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I'm turning 65 — can you be my doctor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We would be glad to be your primary care doctor. In your first 12 months with Medicare Part B, you can have a one-time Welcome to Medicare preventive visit, and after that an Annual Wellness Visit once every 12 months. If you have a Medicare Advantage plan, you may need to choose us as your primary care doctor (PCP): call the member services number on your plan card, or call us and we will help you with the paperwork. Please bring your Medicare or plan card, a photo ID, a list of your medicines or the bottles, and any recent medical records. Call Zephyrhills or Lutz at (813) 782-5518, or Lakeland at (863) 858-3884."
         }
       },
       {
@@ -490,6 +522,57 @@
       .mobile-cta-bar svg{display:none}
       .loc-cta .btn{flex-basis:100%}
     }
+
+    /* Medicare & Seniors section (scoped; senior-friendly sizing) */
+    #medicare{padding:40px 0;background:#f1f7fc;border-top:1px solid #dbeafe;border-bottom:1px solid #dbeafe}
+    #medicare .mc{font-size:18px;line-height:1.6;color:#0f172a}
+    #medicare .mc-card{background:#fff;border:1px solid #cbd5e1;border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,3vw,28px)}
+    #medicare h2{font-size:clamp(26px,4.2vw,34px);line-height:1.2;color:#0f3b66;margin:.1em 0 .4em}
+    #medicare h3{font-size:clamp(21px,3vw,24px);line-height:1.3;color:#0f3b66;margin:1.4em 0 .5em}
+    #medicare h4{font-size:19px;line-height:1.35;color:#0f172a;margin:1em 0 .35em}
+    #medicare p{margin:.4em 0 .8em}
+    #medicare .mc-lead{font-size:19px;color:#1e293b}
+    #medicare .mc-note{font-size:18px;color:#334155;background:#f8fafc;border-left:4px solid #0f3b66;border-radius:6px;padding:12px 14px;margin:14px 0}
+    #medicare .mc-chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 6px;padding:0;list-style:none}
+    #medicare .mc-chips li{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;background:#f1f7fc;border:1px solid #93c5fd;border-radius:999px;font-weight:600;color:#0f172a;font-size:18px}
+    #medicare .mc-list{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:4px 24px}
+    @media(min-width:860px){#medicare .mc-list{grid-template-columns:1fr 1fr}}
+    #medicare .mc-list li{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;padding:8px 0}
+    #medicare .mc-list svg{width:24px;height:24px;margin-top:3px;stroke:#0f3b66;fill:none}
+    #medicare .mc-list strong{display:block}
+    #medicare .mc-list span{color:#334155}
+    #medicare a{color:#0f3b66;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    #medicare a.btn{text-decoration:none}
+    #medicare .mc-list a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+    #medicare .mc-steps{margin:6px 0 0;padding-left:26px}
+    #medicare .mc-steps li{margin:6px 0}
+    #medicare ul.mc-bring{margin:4px 0 0;padding-left:26px}
+    #medicare ul.mc-bring li{margin:4px 0}
+    #medicare .mc-cta{margin-top:22px;padding-top:20px;border-top:1px solid #cbd5e1}
+    #medicare .mc-call{width:100%;max-width:520px;min-height:60px;font-size:21px;padding:14px 24px}
+    #medicare .mc-call svg{width:24px;height:24px}
+    #medicare .mc-phones{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+    #medicare .mc-phones a{display:inline-flex;align-items:center;min-height:48px;padding:10px 16px;border:2px solid #0f3b66;border-radius:12px;background:#fff;color:#0f3b66;font-size:18px;text-decoration:none}
+    #medicare .mc-phones a:hover{background:#f1f7fc}
+    #medicare .mc-es{margin:6px 0 18px;border:2px solid #0f3b66;border-radius:12px;background:#fff}
+    #medicare .mc-es>summary{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 16px;cursor:pointer;font-weight:700;font-size:19px;color:#0f3b66;list-style:none;border-radius:10px}
+    #medicare .mc-es>summary::-webkit-details-marker{display:none}
+    #medicare .mc-es>summary::before{content:"\25B8";font-size:20px;line-height:1}
+    #medicare .mc-es[open]>summary::before{content:"\25BE"}
+    #medicare .mc-es>summary:hover{background:#f1f7fc}
+    #medicare .mc-es>summary:focus-visible,#medicare a:focus-visible,#medicare .btn:focus-visible{outline:3px solid #2d7cc2;outline-offset:2px}
+    #medicare .mc-es .mc-when-open{display:none}
+    #medicare .mc-es[open] .mc-when-open{display:inline}
+    #medicare .mc-es[open] .mc-when-closed{display:none}
+    #medicare .mc-es-body{padding:4px 16px 18px;border-top:1px solid #cbd5e1}
+    @media(max-width:768px){
+      #medicare{padding:24px 0}
+      #medicare .mc-card{padding:16px}
+      #medicare .btn{font-size:18px;min-height:48px}
+      #medicare .mc-call{font-size:20px;min-height:58px}
+      #medicare .mc-phones a{flex:1 1 100%;justify-content:space-between}
+      #medicare .mc-es-body{padding:4px 12px 14px}
+    }
   </style>
 </head>
 <body>
@@ -624,6 +707,141 @@
             Call a Location
           </button>
           <p class="small muted" style="margin-top:12px">Pick your office. 24/7 on-call support is available for all locations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Medicare & Seniors -->
+  <section id="medicare" aria-labelledby="medicareTitle">
+    <div class="wrap">
+      <div class="mc mc-card">
+        <h2 id="medicareTitle">Primary care for Medicare patients in Zephyrhills, Lakeland &amp; Lutz</h2>
+        <p class="mc-lead">Board certified family doctors Parth Patel, MD and Omprakash Pansara, MD care for adults on Medicare and Medicare Advantage at our offices in Zephyrhills, Lakeland and Lutz, serving Pasco, Polk and Hillsborough County.</p>
+
+        <details class="mc-es" lang="es">
+          <summary aria-label="Español: ver esta información en español"><span class="mc-when-closed">Español: ver en español</span><span class="mc-when-open">Español: ocultar</span></summary>
+          <div class="mc-es-body">
+            <h3 style="margin-top:.8em">Atención primaria para pacientes de Medicare en Zephyrhills, Lakeland y Lutz</h3>
+            <p>Los doctores Parth Patel, MD y Omprakash Pansara, MD, certificados por la junta en Medicina Familiar, atienden a adultos con Medicare y Medicare Advantage en nuestras oficinas de Zephyrhills, Lakeland y Lutz, en los condados de Pasco, Polk y Hillsborough.</p>
+
+            <h4>Planes de Medicare con los que trabajamos</h4>
+            <p>Aceptamos Medicare. También trabajamos con planes Medicare Advantage de estas compañías de seguro:</p>
+            <ul class="mc-chips" aria-label="Medicare y compañías de planes Medicare Advantage con las que trabajamos">
+              <li>Medicare</li>
+              <li>Humana</li>
+              <li>CarePlus</li>
+              <li>Devoted Health</li>
+              <li>Optimum Healthcare</li>
+              <li>Freedom Health</li>
+              <li>Ultimate Health Plans</li>
+              <li>United Healthcare</li>
+              <li>Aetna</li>
+            </ul>
+            <p>Cada compañía tiene muchos planes distintos. <strong>Llámenos para verificar su plan</strong> antes de su cita.</p>
+
+            <h4>Lo que ofrecemos a nuestros pacientes mayores</h4>
+            <ul class="mc-list">
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Visita Anual de Bienestar</strong><span>Una visita cada año para revisar su salud y hacer un plan de prevención.</span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Control de enfermedades crónicas</strong><span>Diabetes, enfermedades del corazón, EPOC, presión alta y más.</span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Revisión de medicamentos</strong><span>Revisamos todas sus medicinas para que funcionen bien juntas.</span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Riesgo de caídas y memoria</strong><span>Revisiones sencillas del equilibrio, la seguridad en casa y cambios en la memoria.</span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Manejo de Atención Crónica (CCM)</strong><span>Llamadas mensuales y un plan de cuidado para personas con 2 o más enfermedades crónicas. <a href="#programs">Más sobre CCM</a></span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Monitoreo Remoto (RPM)</strong><span>Las lecturas de aparatos en casa, como el de presión arterial, llegan a nuestro equipo. <a href="#programs">Más sobre RPM</a></span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Citas el mismo día si está enfermo</strong><span>Puede venir sin cita o pedir una cita para el mismo día.</span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Servicio de guardia 24/7</strong><span>Ayuda fuera del horario de oficina para las tres oficinas.</span></div></li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Consultas por video y por teléfono</strong><span>Para seguimientos, resultados y recetas. La cobertura varía según su plan. <a href="#telehealth">Cómo funciona</a></span></div></li>
+            </ul>
+            <p class="mc-note">Medicare cubre una Visita Anual de Bienestar una vez al año (cada 12 meses). La cobertura de otros servicios depende de su plan. Puede haber un copago o coseguro; si tiene preguntas sobre el costo, llámenos o llame a su plan.</p>
+
+            <h4>¿Es nuevo en Medicare o va a cumplir 65 años?</h4>
+            <ol class="mc-steps">
+              <li><strong>Visita de “Bienvenido a Medicare”.</strong> En sus primeros 12 meses con la Parte B de Medicare, puede tener una visita preventiva de “Bienvenido a Medicare” (una sola vez).</li>
+              <li><strong>Visita Anual de Bienestar cada año.</strong> Después, puede tener una Visita Anual de Bienestar una vez cada 12 meses.</li>
+            </ol>
+            <h4>Qué traer a su cita</h4>
+            <ul class="mc-bring">
+              <li>Su tarjeta de Medicare o la tarjeta de su plan</li>
+              <li>Una identificación con foto</li>
+              <li>Una lista de sus medicinas, o los frascos</li>
+              <li>Expedientes o resultados médicos recientes, si los tiene</li>
+            </ul>
+            <h4>Cómo hacernos su médico de cabecera</h4>
+            <p>Muchos planes Medicare Advantage le piden elegir un médico de atención primaria (PCP). Llame al número de servicio al cliente que aparece en la tarjeta de su plan y pida al Dr. Parth Patel o al Dr. Omprakash Pansara como su PCP. O llámenos y le ayudamos con los trámites. Con Medicare Original no tiene que elegir un PCP; solo llámenos para hacer una cita.</p>
+
+            <div class="mc-cta">
+              <button class="btn primary mc-call" type="button" data-call-trigger aria-haspopup="dialog" aria-label="Llámenos: elija una oficina para llamar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Llámenos
+              </button>
+              <p style="margin:14px 0 0">O toque un número para llamar a una oficina:</p>
+              <ul class="mc-phones" aria-label="Teléfonos de las oficinas">
+                <li><a href="tel:+18137825518" aria-label="Llamar a la oficina de Zephyrhills, 813 782 5518">Zephyrhills:&nbsp;(813) 782-5518</a></li>
+                <li><a href="tel:+18638583884" aria-label="Llamar a la oficina de Lakeland, 863 858 3884">Lakeland:&nbsp;(863) 858-3884</a></li>
+                <li><a href="tel:+18137825518" aria-label="Llamar a la oficina de Lutz, 813 782 5518">Lutz:&nbsp;(813) 782-5518</a></li>
+              </ul>
+              <p style="margin:12px 0 0;color:#334155">Zephyrhills y Lakeland: lunes a viernes, 9:00 AM a 5:00 PM. Lutz: sábado, 8:00 AM a 2:00 PM. Servicio de guardia 24/7 para todas las oficinas.</p>
+            </div>
+          </div>
+        </details>
+
+        <h3>Medicare plans we work with</h3>
+        <p>We accept Medicare. We also work with Medicare Advantage plans from these insurance companies:</p>
+        <ul class="mc-chips" aria-label="Medicare and Medicare Advantage insurance companies we work with">
+          <li>Medicare</li>
+          <li>Humana</li>
+          <li>CarePlus</li>
+          <li>Devoted Health</li>
+          <li>Optimum Healthcare</li>
+          <li>Freedom Health</li>
+          <li>Ultimate Health Plans</li>
+          <li>United Healthcare</li>
+          <li>Aetna</li>
+        </ul>
+        <p>Each company offers many different plans. <strong>Call us to check your plan</strong> before your visit.</p>
+
+        <h3>What you get with us</h3>
+        <ul class="mc-list">
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Annual Wellness Visit</strong><span>A yearly visit to review your health and make a plan to help you stay well.</span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Care for long-term conditions</strong><span>Diabetes, heart disease, COPD, high blood pressure and more.</span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Medication review</strong><span>We go over all your medicines to make sure they work well together.</span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Fall-risk and memory checks</strong><span>Simple checks of balance, safety at home and memory changes.</span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Chronic Care Management (CCM)</strong><span>Monthly check-ins and a care plan for people with 2 or more chronic conditions. <a href="#programs">About CCM</a></span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Remote Patient Monitoring (RPM)</strong><span>Readings from home devices, like a blood pressure monitor, go to our team. <a href="#programs">About RPM</a></span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Same-day sick visits</strong><span>Walk-ins welcome, and same-day appointments when you are not feeling well.</span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>24/7 on-call support</strong><span>Help after hours for all three offices.</span></div></li>
+          <li><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><strong>Video and phone visits</strong><span>For follow-ups, results and refills. Coverage varies by plan. <a href="#telehealth">How telehealth works</a></span></div></li>
+        </ul>
+        <p class="mc-note">Medicare covers an Annual Wellness Visit once a year (every 12 months). Coverage for other services depends on your plan. A copay or coinsurance may apply; if you have questions about cost, call us or your plan.</p>
+
+        <h3>New to Medicare or turning 65?</h3>
+        <ol class="mc-steps">
+          <li><strong>“Welcome to Medicare” visit.</strong> In your first 12 months with Medicare Part B, you can have a one-time “Welcome to Medicare” preventive visit.</li>
+          <li><strong>Annual Wellness Visit every year.</strong> After that, you can have an Annual Wellness Visit once every 12 months.</li>
+        </ol>
+        <h4>What to bring</h4>
+        <ul class="mc-bring">
+          <li>Your Medicare card or Medicare plan card</li>
+          <li>A photo ID</li>
+          <li>A list of your medicines, or the bottles</li>
+          <li>Recent medical records or test results, if you have them</li>
+        </ul>
+        <h4>How to make us your primary care doctor</h4>
+        <p>Many Medicare Advantage plans ask you to choose a primary care doctor (PCP). Call the member services number on your plan card and ask for Dr. Parth Patel or Dr. Omprakash Pansara as your PCP. Or call us, and we will help you with the paperwork. With Original Medicare, you do not need to choose a PCP; just call us to schedule.</p>
+
+        <div class="mc-cta">
+          <h3 style="margin-top:0">Questions? Call us</h3>
+          <button class="btn primary mc-call" type="button" data-call-trigger aria-haspopup="dialog" aria-label="Call us: choose an office to call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call us
+          </button>
+          <p style="margin:14px 0 0">Or tap a number to call an office:</p>
+          <ul class="mc-phones" aria-label="Office phone numbers">
+            <li><a href="tel:+18137825518" aria-label="Call the Zephyrhills office, 813 782 5518">Zephyrhills:&nbsp;(813) 782-5518</a></li>
+            <li><a href="tel:+18638583884" aria-label="Call the Lakeland office, 863 858 3884">Lakeland:&nbsp;(863) 858-3884</a></li>
+            <li><a href="tel:+18137825518" aria-label="Call the Lutz office, 813 782 5518">Lutz:&nbsp;(813) 782-5518</a></li>
+          </ul>
+          <p style="margin:12px 0 0;color:#334155">Zephyrhills and Lakeland: Monday to Friday, 9:00 AM to 5:00 PM. Lutz: Saturday, 8:00 AM to 2:00 PM. 24/7 on-call support for all locations.</p>
         </div>
       </div>
     </div>
@@ -927,6 +1145,33 @@
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text" style="color:#475569;line-height:1.6">
               <p>Yes, we accept Medicare and most major insurance plans including United Healthcare, Blue Cross Blue Shield (BCBS), Humana, Optimum Healthcare, Freedom Health, Devoted Health, Florida Blue, Aetna, most Cigna plans, CarePlus, Ultimate Health Plans, Curative, Ambetter, Multiplan, and Tricare. Please call our office to verify your specific plan coverage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom:24px">
+          <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">Do you accept Medicare Advantage plans?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="color:#475569;line-height:1.6">
+              <p>Yes. We accept Medicare, and we work with Medicare Advantage plans from Humana, CarePlus, Devoted Health, Optimum Healthcare, Freedom Health, Ultimate Health Plans, United Healthcare and Aetna. Each company offers many different plans and networks can change, so please call us to check your specific plan before your visit: Zephyrhills or Lutz at (813) 782-5518, or Lakeland at (863) 858-3884.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom:24px">
+          <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">What is a Medicare Annual Wellness Visit?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="color:#475569;line-height:1.6">
+              <p>It is a yearly visit focused on prevention. It is not a full head-to-toe physical. We review your health history and your medicines, check things like blood pressure and weight, check for fall risk and memory changes, and make a personal plan to help you stay well. Medicare covers an Annual Wellness Visit once a year (every 12 months). Coverage for other services depends on your plan, and if other problems are checked or treated during the same visit, a copay or coinsurance may apply.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom:24px">
+          <h3 itemprop="name" style="color:#0f3b66;font-size:18px;margin-bottom:8px">I'm turning 65 — can you be my doctor?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="color:#475569;line-height:1.6">
+              <p>We would be glad to be your primary care doctor. In your first 12 months with Medicare Part B, you can have a one-time Welcome to Medicare preventive visit, and after that an Annual Wellness Visit once every 12 months. If you have a Medicare Advantage plan, you may need to choose us as your primary care doctor (PCP): call the member services number on your plan card, or call us and we will help you with the paperwork. Please bring your Medicare or plan card, a photo ID, a list of your medicines or the bottles, and any recent medical records. Call Zephyrhills or Lutz at (813) 782-5518, or Lakeland at (863) 858-3884.</p>
             </div>
           </div>
         </div>
